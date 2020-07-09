@@ -1,6 +1,13 @@
-# Zamagana Synth
+# Zamagana Base Synth
 
 #### a project by Marcelo, Zakaria, Nathan and Gabriela
+
+## Main task division
+
+- Marcelo: CSS
+- Zakaria: React/JS
+- Nathan: React/JS
+- Gabriela: Project Management
 
 ## Features
 
@@ -16,6 +23,7 @@
 
 - keyboard
 - modulator buttons (reverb and delay)
+- button for volume
 - which note goes first and last
 - extra button to add octave
 - choose type of Synth
@@ -32,3 +40,27 @@ we used the tonejs library:
 - [MDN Simple Synth](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Simple_synth)
 - [JS Piano Keyboard](https://www.freecodecamp.org/news/javascript-piano-keyboard/)
 - [MDN Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+
+## Project Structure
+
+Project
+│
+│ README.md
+| .gitignore
+│ package.json
+| package-lock.json
+│
+│
+└───src
+│ │  
+│ └───App.js
+│ └───index.js
+│ └───helpers.js
+| └───scss
+| |
+| └───main
+|
+│
+└───public
+|
+└───index.html
