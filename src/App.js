@@ -9,7 +9,7 @@ const App = () => {
     sustain: 0.3,
     release: 1,
   });
-  const [zVol, setZvol] = useState(-6);
+  const [zVol, setZvol] = useState(-1);
   return (
     <Fragment>
       <h1>Zamagana</h1>
