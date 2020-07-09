@@ -1,6 +1,9 @@
-import React, { Fragment, Component } from "react";
+import React from "react";
 import * as Tone from "tone";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 61c9b945a65ce56540a9bb54705c0cfbdc635a63
 import Zkeys from "./Zkey";
 
 const Zsynth = (props) => {
