@@ -1,1 +1,14 @@
-["C4", "Db4", "D4", "Eb4", "E4", "F4", "Gb4", "G4", "Ab4", "A4", "Bb4", "b4"]
+[
+  { "note": "C4", "id": 1, "color": "white" },
+  { "note": "Db4", "id": 2, "color": "black" },
+  { "note": "D4", "id": 3, "color": "white" },
+  { "note": "Eb4", "id": 4, "color": "black" },
+  { "note": "E4", "id": 5, "color": "white" },
+  { "note": "F4", "id": 6, "color": "white" },
+  { "note": "Gb4", "id": 7, "color": "black" },
+  { "note": "G4", "id": 8, "color": "white" },
+  { "note": "Ab4", "id": 9, "color": "black" },
+  { "note": "A4", "id": 10, "color": "white " },
+  { "note": "Bb4", "id": 11, "color": "black" },
+  { "note": "B4", "id": 12, "color": "white" }
+]
