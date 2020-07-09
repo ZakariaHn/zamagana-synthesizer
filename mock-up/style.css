@@ -56,8 +56,13 @@ body {
   background:linear-gradient(to right,#444 0%,#222 100%)
 }
 
-/* space between white and black keys */
-.a,.g,.f,.d,.c {
+/* put part of the white keys "D", "E", "G", "A", and "B" behind the black keys */
+.d,
+.e,
+.g,
+.a,
+.b
+ {
   margin:0 0 0 -1em
 }
 
