@@ -1,9 +1,17 @@
 import React from "react";
 import * as Tone from "tone";
-import znotes from "../notes.json";
 
-const Keys = (props) => {
-  return znotes.map((key) => <button onClick={props.play}>{key}</button>);
+const Zkeys = (props) => {
+  function play(note) {
+    Tone.start();
+    props.zsynth.triggerAttackRelease(note, "8n");
+  }
+
+  return props.zNotes.map((key, i) => (
+    <button id={key} key={i} onClick={() => play(key)}>
+      {key}
+    </button>
+  ));
 };
 
-export default Keys;
+export default Zkeys;
