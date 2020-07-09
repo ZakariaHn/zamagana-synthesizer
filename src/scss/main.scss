@@ -6,12 +6,16 @@ body {
   margin: 0;
   background: #222;
 }
-
+ul {
+  padding: 0;
+}
 .set {
   height: 18.875em;
   width: 34em;
   margin: 5em auto;
-  padding: 3em 0 0 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   border: 1px solid #160801;
   border-radius: 1em;
@@ -59,6 +63,7 @@ button {
   width: 2em;
   margin: 0 0 0 -1em;
   z-index: 2;
+  color: white;
   border: 1px solid #000;
   border-radius: 0 0 3px 3px;
   box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
@@ -72,11 +77,11 @@ button {
   background: linear-gradient(to right, #444 0%, #222 100%);
 }
 
-.a,
-.g,
-.f,
-.d,
-.c {
+button:nth-child(3),
+button:nth-child(5),
+button:nth-child(8),
+button:nth-child(10),
+button:nth-child(12) {
   margin: 0 0 0 -1em;
 }
 

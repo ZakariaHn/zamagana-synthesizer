@@ -1,6 +1,6 @@
 import React from "react";
 
-const ZsynthTypeSwitsher = (props) => {
+const ZsynthTypeSwitcher = (props) => {
   function handlechange(e) {
     // console.log(e.target.value);
   }
@@ -19,4 +19,4 @@ const ZsynthTypeSwitsher = (props) => {
   );
 };
 
-export default ZsynthTypeSwitsher;
+export default ZsynthTypeSwitcher;
