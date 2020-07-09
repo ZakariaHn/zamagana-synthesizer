@@ -41,9 +41,11 @@ we used the tonejs library:
 - [JS Piano Keyboard](https://www.freecodecamp.org/news/javascript-piano-keyboard/)
 - [MDN Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 
-## File Structure
+
+## Project Structure
 
 ```
+
 Project
 │
 │ README.md
