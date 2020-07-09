@@ -61,6 +61,6 @@ Project
 │
 │
 └───public
-|    └───index.html
+     └───index.html
 
 ```
