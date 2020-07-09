@@ -1,4 +1,4 @@
-# Zamagana Base Synth
+# Zamagana Synth
 
 #### a project by Marcelo, Zakaria, Nathan and Gabriela
 
