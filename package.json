@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
@@ -16,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/gabrielaacha/zamagana_synth/issues"
   },
-  "homepage": "https://github.com/gabrielaacha/zamagana_synth#readme",
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "node-sass": "^4.14.1",
