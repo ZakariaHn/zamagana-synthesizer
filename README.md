@@ -30,5 +30,5 @@ we used the tonejs library:
 
 - [Learning Music Ableton](https://learningmusic.ableton.com/)
 - [MDN Simple Synth](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Simple_synth)
-- [Piano with vanilla JS](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [JS Piano Keyboard](https://www.freecodecamp.org/news/javascript-piano-keyboard/)
 - [MDN Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
