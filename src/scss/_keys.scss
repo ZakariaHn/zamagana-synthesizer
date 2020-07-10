@@ -88,7 +88,8 @@ div:nth-child(12) {
   border-radius: 0 5px 5px 5px;
 }
 
-.octave {
+.octave,
+.release {
   border: 1px solid white;
   color: white;
   display: flex;
@@ -97,10 +98,12 @@ div:nth-child(12) {
   justify-content: center;
   list-style: none;
   height: 2rem;
-  width: 6rem;
+  width: rem;
+  margin-left: 0.5rem;
   & * {
-    margin: 4px;
     cursor: pointer;
+    margin: 4px;
     height: 1rem;
+    color: white;
   }
 }

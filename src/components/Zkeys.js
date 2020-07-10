@@ -2,43 +2,46 @@ import React, { Component } from "react";
 import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 
-// const Zkeys = (props) => {
-
-//   return (
-
-//   );
-// };
-
-// export default Zkeys;
-
-// play(key.note+key.octave)
-
 class Zkeys extends Component {
   constructor(props) {
     super(props);
-    this.state = { octave: 4 };
+    this.state = { octave: 4, release: 0.1 };
   }
 
   play = (note) => {
     Tone.start();
-    this.props.zTone.triggerAttackRelease(note + this.state.octave, "0.1s");
+    const octavedNote = note + this.state.octave;
+    this.props.zTone.triggerAttackRelease(octavedNote, this.state.release);
   };
 
-  handleIncrement = () => {
+  liftOctave = () => {
     const oct = this.state.octave + 1;
     this.setState({ octave: oct });
   };
 
-  handleDecrement = () => {
+  dropOctave = () => {
     const oct = this.state.octave - 1;
     this.setState({ octave: oct });
   };
 
+  boostRelease = () => {
+    let rel = this.state.release + 0.1;
+    this.setState({ release: rel });
+  };
+
+  diminishRelease = () => {
+    let rel = this.state.release - 0.1;
+    console.log(rel);
+    this.setState({ release: rel });
+  };
+
   render() {
+    const { zNotes } = this.props;
+    const { octave, release } = this.state;
     return (
       <div className="set">
         <ul>
-          {this.props.zNotes.map((key) => (
+          {zNotes.map((key) => (
             <div
               className={key.color}
               id={key.id}
@@ -65,7 +68,7 @@ class Zkeys extends Component {
             "k",
           ]}
           onKeyEvent={(key, e) =>
-            this.props.zNotes.map((obj) => {
+            zNotes.map((obj) => {
               if (key === obj.keyboardKey) {
                 this.play(obj.note);
               }
@@ -73,9 +76,14 @@ class Zkeys extends Component {
           }
         />
         <ul className="octave">
-          <li onClick={this.handleIncrement}>+</li>
-          <li>{`octave ${this.state.octave}`}</li>
-          <li onClick={this.handleDecrement}>-</li>
+          <li onClick={this.liftOctave}>+</li>
+          <li>{`Octave ${octave}`}</li>
+          <li onClick={this.dropOctave}>-</li>
+        </ul>
+        <ul className="release">
+          <li onClick={this.boostRelease}>+</li>
+          <li>Release</li>
+          <li onClick={this.diminishRelease}>-</li>
         </ul>
       </div>
     );
