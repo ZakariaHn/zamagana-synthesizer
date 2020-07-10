@@ -46,7 +46,7 @@ class Zkeys extends Component {
               className={key.color}
               id={key.id}
               key={key.id}
-              onClick={() => this.play(key.note)}
+              onMouseDown={() => this.play(key.note)}
             >
               {key.keyboardKey}
             </div>
