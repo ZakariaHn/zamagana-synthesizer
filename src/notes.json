@@ -1,14 +1,14 @@
 [
-  { "note": "C4", "id": 1, "color": "white" },
-  { "note": "Db4", "id": 2, "color": "black" },
-  { "note": "D4", "id": 3, "color": "white" },
-  { "note": "Eb4", "id": 4, "color": "black" },
-  { "note": "E4", "id": 5, "color": "white" },
-  { "note": "F4", "id": 6, "color": "white" },
-  { "note": "Gb4", "id": 7, "color": "black" },
-  { "note": "G4", "id": 8, "color": "white" },
-  { "note": "Ab4", "id": 9, "color": "black" },
-  { "note": "A4", "id": 10, "color": "white " },
-  { "note": "Bb4", "id": 11, "color": "black" },
-  { "note": "B4", "id": 12, "color": "white" }
+  { "note": "C4", "id": 1, "color": "white", "keyboardKey": "a" },
+  { "note": "Db4", "id": 2, "color": "black", "keyboardKey": "w" },
+  { "note": "D4", "id": 3, "color": "white", "keyboardKey": "d" },
+  { "note": "Eb4", "id": 4, "color": "black", "keyboardKey": "r" },
+  { "note": "E4", "id": 5, "color": "white", "keyboardKey": "f" },
+  { "note": "F4", "id": 6, "color": "white", "keyboardKey": "g" },
+  { "note": "Gb4", "id": 7, "color": "black", "keyboardKey": "y" },
+  { "note": "G4", "id": 8, "color": "white", "keyboardKey": "h" },
+  { "note": "Ab4", "id": 9, "color": "black", "keyboardKey": "u" },
+  { "note": "A4", "id": 10, "color": "white ", "keyboardKey": "j" },
+  { "note": "Bb4", "id": 11, "color": "black", "keyboardKey": "i" },
+  { "note": "B4", "id": 12, "color": "white", "keyboardKey": "k" }
 ]
