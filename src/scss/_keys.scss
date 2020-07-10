@@ -12,11 +12,11 @@ ul {
 
 .set {
   height: 18.875em;
-  width: 34em;
+  width: 45em;
   margin: 5em auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+
   position: relative;
   border: 1px solid #160801;
   border-radius: 1em;
@@ -86,4 +86,21 @@ div:nth-child(12) {
 
 .set .set div:last-child {
   border-radius: 0 5px 5px 5px;
+}
+
+.octave {
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 2rem;
+  width: 6rem;
+  & * {
+    margin: 4px;
+    cursor: pointer;
+    height: 1rem;
+  }
 }
