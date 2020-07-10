@@ -1,9 +1,7 @@
 import React from "react";
 
 const ZsynthTypeSwitcher = (props) => {
-  function handlechange(e) {
-    // console.log(e.target.value);
-  }
+  function handlechange(e) {}
   return (
     <select onChange={handlechange}>
       <option value="Synth">Synth</option>
