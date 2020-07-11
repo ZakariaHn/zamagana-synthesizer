@@ -1,6 +1,7 @@
 import React from "react";
 import * as Tone from "tone";
 import Zkeys from "./Zkey";
+import Zcontrols from "./Zcontrols";
 
 const Zsynth = (props) => {
   // console.log(props);
@@ -12,7 +13,12 @@ const Zsynth = (props) => {
 
   console.log(zsynth);
 
-  return <Zkeys zNotes={props.zNotes} zsynth={zsynth} />;
+  return (
+    <div className="zsynth">
+      <Zcontrols setZvol={props.setZvol} zVol={props.zVol} />
+      <Zkeys zNotes={props.zNotes} zsynth={zsynth} />;
+    </div>
+  );
 };
 
 export default Zsynth;
