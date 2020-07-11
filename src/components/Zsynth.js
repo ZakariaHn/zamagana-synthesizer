@@ -1,14 +1,16 @@
 import React from "react";
 import * as Tone from "tone";
-<<<<<<< HEAD
-
-=======
->>>>>>> 61c9b945a65ce56540a9bb54705c0cfbdc635a63
 import Zkeys from "./Zkey";
 
 const Zsynth = (props) => {
-  console.log(props);
-  var zsynth = new Tone.Synth().toMaster();
+  // console.log(props);
+  // console.log(props.zOsc);
+  var zsynth = new Tone.Synth({
+    volume: props.zVol,
+    oscillator: { type: props.zOsc },
+  }).toMaster();
+
+  console.log(zsynth);
 
   return <Zkeys zNotes={props.zNotes} zsynth={zsynth} />;
 };
