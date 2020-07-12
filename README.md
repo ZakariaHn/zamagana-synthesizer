@@ -55,14 +55,15 @@ Project
 │
 └───src
 │   └───components
-│        └───Zkey
-│        └───Zsynth
-│        └───Z
+│   │    └───Zkey
+│   │    └───Zsynth
+│   │    └───Z
 │   └───App.js
 │   └───index.js
 │   └───helpers.js
 │   └───scss
-│        └───main
+│   │    └───main
+│   └───notes.json
 │
 │
 └───public
