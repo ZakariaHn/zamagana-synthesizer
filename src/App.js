@@ -17,7 +17,13 @@ const App = () => {
   return (
     <Fragment>
       <h1>Zamagana</h1>
-      <Zsynth zOsc={zOsc} zEnv={zEnv} zVol={zVol} zNotes={zNotes} />
+      <Zsynth
+        zOsc={zOsc}
+        zEnv={zEnv}
+        zVol={zVol}
+        zNotes={zNotes}
+        setZvol={setZvol}
+      />
     </Fragment>
   );
 };
