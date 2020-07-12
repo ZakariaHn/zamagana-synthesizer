@@ -4,14 +4,10 @@ import Zkeys from "./Zkey";
 import Zcontrols from "./Zcontrols";
 
 const Zsynth = (props) => {
-  // console.log(props);
-  // console.log(props.zOsc);
   var zsynth = new Tone.Synth({
     volume: props.zVol,
     oscillator: { type: props.zOsc },
   }).toMaster();
-
-  console.log(zsynth);
 
   return (
     <div className="zsynth">
