@@ -30,9 +30,8 @@
 
 ## Technologies
 
-we used the tonejs library:
-
-- [ToneJs](https://tonejs.github.io/)
+- [ToneJs Library](https://tonejs.github.io/)
+- [React keyboard event handler](https://www.npmjs.com/package/react-keyboard-event-handler)
 
 ## References
 
@@ -57,7 +56,7 @@ Project
 │   └───components
 │   │    └───Zkey
 │   │    └───Zsynth
-│   │    └───Z
+│   │    └───ZsynthTypeSwitcher
 │   └───App.js
 │   └───index.js
 │   └───helpers.js
