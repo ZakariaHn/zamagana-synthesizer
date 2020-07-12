@@ -1,6 +1,6 @@
 import React from "react";
 import * as Tone from "tone";
-import Zkeys from "./Zkey";
+import Zkeys from "./Zkeys";
 import Zcontrols from "./Zcontrols";
 
 const Zsynth = (props) => {
