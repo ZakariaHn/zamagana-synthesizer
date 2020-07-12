@@ -41,7 +41,6 @@ we used the tonejs library:
 - [JS Piano Keyboard](https://www.freecodecamp.org/news/javascript-piano-keyboard/)
 - [MDN Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 
-
 ## Project Structure
 
 ```
@@ -55,6 +54,10 @@ Project
 │
 │
 └───src
+│   └───components
+│        └───Zkey
+│        └───Zsynth
+│        └───Z
 │   └───App.js
 │   └───index.js
 │   └───helpers.js
@@ -63,6 +66,6 @@ Project
 │
 │
 └───public
-|    └───index.html
+     └───index.html
 
 ```
