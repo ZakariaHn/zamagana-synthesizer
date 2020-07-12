@@ -4,7 +4,8 @@ import notes from "./notes.json";
 
 const App = () => {
   const [zNotes, setZnotes] = useState(notes);
-  const [zOsc, setZosc] = useState("triangle");
+
+  const [zOsc, setZosc] = useState("saw");
   const [zEnv, setZenv] = useState({
     attack: 0.1,
     decay: 0.1,
