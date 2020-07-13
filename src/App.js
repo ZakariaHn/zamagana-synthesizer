@@ -12,11 +12,11 @@ const App = () => {
     release: 4,
   });
 
-  const [zVol, setZvol] = useState(1);
+  const [zVol, setZvol] = useState(-20);
   const [zOct, setZoct] = useState(2);
   const [zRel, setZrel] = useState(0.1);
   const [zDel, setZdel] = useState({
-    maxDelay: 0.1,
+    maxDelay: 0,
     feedback: 0,
   });
 
