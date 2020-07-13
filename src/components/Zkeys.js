@@ -7,7 +7,7 @@ import ZReleaseController from "./controlers/ZreleaseControler";
 import ZvolumeControler from "./controlers/ZvolumeController";
 
 const Zkeys = (props) => {
-  const { zOct, zNotes, zRel, zsynth } = props;
+  const { zOct, zNotes, zRel, zVol, zsynth, setZvol, setZrel, setZoct } = props;
 
   const play = (note) => {
     Tone.start();
@@ -53,9 +53,9 @@ const Zkeys = (props) => {
         }
       />
       <div className="controlers">
-        <ZvolumeControler setZvol={props.setZvol} zVol={props.zVol} />
-        <ZReleaseController zRel={props.zRel} setZrel={props.setZrel} />
-        <ZOctaveController zOct={props.zOct} setZoct={props.setZoct} />
+        <ZvolumeControler zVol={zVol} setZvol={setZvol} />
+        <ZReleaseController zRel={zRel} setZrel={setZrel} />
+        <ZOctaveController zOct={zOct} setZoct={setZoct} />
       </div>
     </div>
   );
