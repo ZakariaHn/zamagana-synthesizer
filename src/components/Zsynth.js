@@ -1,18 +1,38 @@
-import React, { Fragment } from "react";
+import React from "react";
 import * as Tone from "tone";
 import Zkeys from "./Zkeys";
-import Zcontrols from "./Zcontrols";
 
 const Zsynth = (props) => {
+  var zReverb = new Tone.Reverb();
   var zsynth = new Tone.Synth({
     volume: props.zVol,
     oscillator: { type: props.zOsc },
   }).toMaster();
 
+  const {
+    zNotes,
+    zOct,
+    setZoct,
+    zRel,
+    setZrel,
+    zVol,
+    setZvol,
+    setZosc,
+  } = props;
+
   return (
     <div className="zsynth">
-      <Zcontrols setZvol={props.setZvol} zVol={props.zVol} />
-      <Zkeys zNotes={props.zNotes} zsynth={zsynth} />;
+      <Zkeys
+        zNotes={zNotes}
+        zsynth={zsynth}
+        zOct={zOct}
+        setZoct={setZoct}
+        zRel={zRel}
+        setZrel={setZrel}
+        zVol={zVol}
+        setZvol={setZvol}
+        setZosc={setZosc}
+      />
     </div>
   );
 };
