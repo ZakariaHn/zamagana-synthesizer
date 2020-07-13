@@ -3,8 +3,6 @@ import * as Tone from "tone";
 import Zkeys from "./Zkeys";
 import Zcontrols from "./Zcontrols";
 
-//dogs
-
 const Zsynth = (props) => {
   var zsynth = new Tone.Synth({
     volume: props.zVol,
@@ -14,7 +12,7 @@ const Zsynth = (props) => {
   return (
     <div className="zsynth">
       <Zcontrols setZvol={props.setZvol} zVol={props.zVol} />
-      {/* <Zkeys zNotes={props.zNotes} zsynth={zsynth} />; */}
+      <Zkeys zNotes={props.zNotes} zsynth={zsynth} />
     </div>
   );
 };
