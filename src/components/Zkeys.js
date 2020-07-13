@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 
+import ZOctaveController from "./controlers/ZOctaveController";
+import ZReleaseController from "./controlers/ZreleaseControler";
+import ZvolumeControler from "./controlers/ZvolumeController";
+
 const Zkeys = (props) => {
-  const { zOct, zNotes, zRel, setZoct, zsynth, setZrel } = props;
+  const { zOct, zNotes, zRel, zsynth } = props;
 
   const play = (note) => {
     Tone.start();
@@ -48,16 +52,11 @@ const Zkeys = (props) => {
           })
         }
       />
-      <ul className="octave">
-        <li onClick={() => setZoct((x) => x + 1)}>+</li>
-        <li>{`Octave ${zOct}`}</li>
-        <li onClick={() => setZoct((x) => x - 1)}>-</li>
-      </ul>
-      <ul className="release">
-        <li onClick={() => setZrel((x) => x + 0.1)}>+</li>
-        <li>Release</li>
-        <li onClick={() => setZrel((x) => x - 0.1)}>-</li>
-      </ul>
+      <div className="controlers">
+        <ZvolumeControler setZvol={props.setZvol} zVol={props.zVol} />
+        <ZReleaseController zRel={props.zRel} setZrel={props.setZrel} />
+        <ZOctaveController zOct={props.zOct} setZoct={props.setZoct} />
+      </div>
     </div>
   );
 };
