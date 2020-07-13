@@ -3,11 +3,15 @@ import * as Tone from "tone";
 import Zkeys from "./Zkeys";
 
 const Zsynth = (props) => {
-  var zReverb = new Tone.Reverb();
+  let delay = new Tone.FeedbackDelay({
+    maxDelay: props.zDel.maxDelay,
+    feedback: props.zDel.feedback,
+  }).toMaster();
+
   var zsynth = new Tone.Synth({
     volume: props.zVol,
     oscillator: { type: props.zOsc },
-  }).toMaster();
+  }).connect(delay);
 
   const {
     zNotes,
@@ -18,7 +22,11 @@ const Zsynth = (props) => {
     zVol,
     setZvol,
     setZosc,
+    zDel,
+    setZdel,
   } = props;
+
+  const { maxDelay, feedback } = props.zDel;
 
   return (
     <div className="zsynth">
@@ -32,6 +40,10 @@ const Zsynth = (props) => {
         zVol={zVol}
         setZvol={setZvol}
         setZosc={setZosc}
+        maxDelay={maxDelay}
+        feedback={feedback}
+        zDel={zDel}
+        setZdel={setZdel}
       />
     </div>
   );

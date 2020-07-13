@@ -5,6 +5,7 @@ import ZOctaveController from "./controlers/ZOctaveController";
 import ZReleaseController from "./controlers/ZreleaseControler";
 import ZvolumeControler from "./controlers/ZvolumeController";
 import ZwaveFormController from "./controlers/ZwaveFormController";
+import ZdelayController from "./controlers/ZdelayController";
 
 const Zkeys = (props) => {
   const {
@@ -17,6 +18,10 @@ const Zkeys = (props) => {
     setZrel,
     setZoct,
     setZosc,
+    maxDelay,
+    feedback,
+    zDel,
+    setZdel,
   } = props;
 
   const play = (note) => {
@@ -67,6 +72,12 @@ const Zkeys = (props) => {
         <ZReleaseController zRel={zRel} setZrel={setZrel} />
         <ZOctaveController zOct={zOct} setZoct={setZoct} />
         <ZwaveFormController setZosc={setZosc} />
+        <ZdelayController
+          maxDelay={maxDelay}
+          feedback={feedback}
+          setZdel={setZdel}
+          zDel={zDel}
+        />
       </div>
     </div>
   );

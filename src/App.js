@@ -4,7 +4,6 @@ import notes from "./notes.json";
 
 const App = () => {
   const [zNotes, setZnotes] = useState(notes);
-
   const [zOsc, setZosc] = useState("triangle");
   const [zEnv, setZenv] = useState({
     attack: 1,
@@ -16,6 +15,10 @@ const App = () => {
   const [zVol, setZvol] = useState(1);
   const [zOct, setZoct] = useState(2);
   const [zRel, setZrel] = useState(0.1);
+  const [zDel, setZdel] = useState({
+    maxDelay: 0.1,
+    feedback: 0,
+  });
 
   return (
     <Fragment>
@@ -33,6 +36,8 @@ const App = () => {
         setZoct={setZoct}
         zRel={zRel}
         setZrel={setZrel}
+        zDel={zDel}
+        setZdel={setZdel}
       />
     </Fragment>
   );
