@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
+import Zsynth from "./Zsynth";
 
 class Zkeys extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Zkeys extends Component {
   play = (note) => {
     Tone.start();
     const octavedNote = note + this.state.octave;
-    this.props.zTone.triggerAttackRelease(octavedNote, this.state.release);
+    this.props.zsynth.triggerAttackRelease(octavedNote, this.state.release);
   };
 
   liftOctave = () => {
