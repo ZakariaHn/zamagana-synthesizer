@@ -12,7 +12,15 @@ const Zsynth = (props) => {
   return (
     <div className="zsynth">
       <Zcontrols setZvol={props.setZvol} zVol={props.zVol} />
-      <Zkeys zNotes={props.zNotes} zsynth={zsynth} />;
+      <Zkeys
+        zNotes={props.zNotes}
+        zsynth={zsynth}
+        zOct={props.zOct}
+        setZoct={props.setZoct}
+        zRel={props.zRel}
+        setZrel={props.setZrel}
+      />
+      ;
     </div>
   );
 };

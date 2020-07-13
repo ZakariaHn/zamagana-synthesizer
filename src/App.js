@@ -12,17 +12,27 @@ const App = () => {
     sustain: 0.3,
     release: 1,
   });
+
   const [zVol, setZvol] = useState(-1);
+  const [zOct, setZoct] = useState(2);
+  const [zRel, setZrel] = useState(0.1);
 
   return (
     <Fragment>
       <h1>Zamagana</h1>
       <Zsynth
-        zOsc={zOsc}
-        zEnv={zEnv}
-        zVol={zVol}
         zNotes={zNotes}
+        setZnotes={setZnotes}
+        zOsc={zOsc}
+        setZosc={setZosc}
+        zEnv={zEnv}
+        setZenv={setZenv}
+        zVol={zVol}
         setZvol={setZvol}
+        zOct={zOct}
+        setZoct={setZoct}
+        zRel={zRel}
+        setZrel={setZrel}
       />
     </Fragment>
   );
