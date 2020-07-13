@@ -18,6 +18,8 @@ const Zsynth = (props) => {
     zVol,
     setZvol,
     setZosc,
+    zRev,
+    setZrev,
   } = props;
 
   return (
@@ -32,6 +34,8 @@ const Zsynth = (props) => {
         zVol={zVol}
         setZvol={setZvol}
         setZosc={setZosc}
+        zRev={zRev}
+        setZrev={setZrev}
       />
     </div>
   );

@@ -5,6 +5,7 @@ import ZOctaveController from "./controlers/ZOctaveController";
 import ZReleaseController from "./controlers/ZreleaseControler";
 import ZvolumeControler from "./controlers/ZvolumeController";
 import ZwaveFormController from "./controlers/ZwaveFormController";
+import ZreverbController from "./controlers/ZreverbController";
 
 const Zkeys = (props) => {
   const {
@@ -12,11 +13,13 @@ const Zkeys = (props) => {
     zNotes,
     zRel,
     zVol,
+    zRev,
     zsynth,
     setZvol,
     setZrel,
     setZoct,
     setZosc,
+    setZrev,
   } = props;
 
   const play = (note) => {
@@ -66,6 +69,7 @@ const Zkeys = (props) => {
         <ZvolumeControler zVol={zVol} setZvol={setZvol} />
         <ZReleaseController zRel={zRel} setZrel={setZrel} />
         <ZOctaveController zOct={zOct} setZoct={setZoct} />
+        <ZreverbController zRev={zRev} setZrev={setZrev} />
         <ZwaveFormController setZosc={setZosc} />
       </div>
     </div>
