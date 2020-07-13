@@ -1,9 +1,6 @@
 import React from "react";
 
 const Zcontrols = (props) => {
-  console.log(props.zOsc);
-  console.log(props.zVol);
-
   return (
     <div className="controls">
       <span>Volume: {props.zVol}</span>
