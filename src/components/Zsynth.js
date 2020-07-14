@@ -1,13 +1,18 @@
 import React from "react";
 import * as Tone from "tone";
 import Zkeys from "./Zkeys";
+import Zcontrols from "./Zcontrols";
 
 const Zsynth = (props) => {
-  var zReverb = new Tone.Reverb();
+  let delay = new Tone.FeedbackDelay({
+    maxDelay: props.zDel.maxDelay,
+    feedback: props.zDel.feedback,
+  }).toMaster();
+
   var zsynth = new Tone.Synth({
     volume: props.zVol,
     oscillator: { type: props.zOsc },
-  }).toMaster();
+  }).connect(delay);
 
   const {
     zNotes,
@@ -18,20 +23,31 @@ const Zsynth = (props) => {
     zVol,
     setZvol,
     setZosc,
+    zRev,
+    setZrev,
+    zDel,
+    setZdel,
   } = props;
+
+  const { maxDelay, feedback } = props.zDel;
 
   return (
     <div className="zsynth">
-      <Zkeys
-        zNotes={zNotes}
-        zsynth={zsynth}
-        zOct={zOct}
-        setZoct={setZoct}
-        zRel={zRel}
-        setZrel={setZrel}
+      <Zkeys zNotes={zNotes} zsynth={zsynth} zRel={zRel} zOct={zOct} />
+      <Zcontrols
+        zDel={zDel}
+        setZdel={setZdel}
         zVol={zVol}
         setZvol={setZvol}
+        maxDelay={maxDelay}
+        feedback={feedback}
+        zRev={zRev}
+        setZrev={setZrev}
+        zRel={zRel}
+        zOct={zOct}
         setZosc={setZosc}
+        setZrel={setZrel}
+        setZoct={setZoct}
       />
     </div>
   );
