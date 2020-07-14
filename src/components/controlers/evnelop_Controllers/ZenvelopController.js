@@ -22,7 +22,15 @@ const ZenvelopControllers = (props) => {
     setZenv({ ...zEnv, release: e.target.value });
     console.log(zEnv);
   };
-
+  const handleResetEnvelop = () => {
+    setZenv({
+      ...zEnv,
+      attack: 0.01,
+      decay: 0.1,
+      sustain: 0.5,
+      release: 1,
+    });
+  };
   return (
     <div className="envelop control">
       <div className="attackSlider">
@@ -68,6 +76,7 @@ const ZenvelopControllers = (props) => {
           defaultValue={0}
         />
       </div>
+      <button onClick={handleResetEnvelop}>Reset Envelop</button>
     </div>
   );
 };

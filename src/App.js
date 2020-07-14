@@ -6,20 +6,18 @@ const App = () => {
   const [zNotes, setZnotes] = useState(notes);
   const [zOsc, setZosc] = useState("triangle");
   const [zEnv, setZenv] = useState({
-    attack: 1,
+    attack: 0.01,
     decay: 0.1,
-    sustain: 2,
-    release: 4,
+    sustain: 0.5,
+    release: 1,
   });
 
   const [zVol, setZvol] = useState(-20);
   const [zOct, setZoct] = useState(2);
   const [zRel, setZrel] = useState(0.1);
-
   const [zRev, setZrev] = useState({ decay: 1.5, preDelay: 0.01 });
-
   const [zDel, setZdel] = useState({
-    maxDelay: 0,
+    maxDelay: 9,
     feedback: 0,
   });
 
