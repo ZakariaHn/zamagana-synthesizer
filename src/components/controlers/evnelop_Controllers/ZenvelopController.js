@@ -22,6 +22,7 @@ const ZenvelopControllers = (props) => {
     setZenv({ ...zEnv, release: e.target.value });
     console.log(zEnv);
   };
+
   return (
     <div className="envelop control">
       <div className="attackSlider">
@@ -29,7 +30,8 @@ const ZenvelopControllers = (props) => {
         <input
           type="range"
           min={0}
-          max={10}
+          max={2}
+          step="0.2"
           value={zEnv.attack}
           onChange={handleAttack}
         />
@@ -39,7 +41,8 @@ const ZenvelopControllers = (props) => {
         <input
           type="range"
           min={0}
-          max={10}
+          max={2}
+          step="0.2"
           value={zEnv.decay}
           onChange={handleDecay}
         />
@@ -49,7 +52,8 @@ const ZenvelopControllers = (props) => {
         <input
           type="range"
           min={0}
-          max={10}
+          max={2}
+          step="0.2"
           value={zEnv.sustain}
           onChange={handleSustain}
         />
