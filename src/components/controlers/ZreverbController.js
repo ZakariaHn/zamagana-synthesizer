@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 const ZreverbController = (props) => {
   const { zRev, setZrev } = props;
-  const handleReverb = (e) => {
-    props.setZrev(e.target.value);
-  };
+  //   const handleReverb = (e) => {
+  //     props.setZrev(e.target.value);
+  //   };
   return (
     // <Fragment>
     //   <div className="reverbSliderTiltle">
@@ -40,7 +40,7 @@ const ZreverbController = (props) => {
           >
             +
           </li>
-          <li>decay{props.zRev.decay.value}</li>
+          <li>decay{props.zRev.decay}</li>
           <li
             onClick={() =>
               props.setZrev({
