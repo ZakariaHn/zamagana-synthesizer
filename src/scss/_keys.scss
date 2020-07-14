@@ -85,11 +85,16 @@ div:nth-child(12) {
 }
 
 .set .set div:last-child {
-  border-radius: 0 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  & * {
+    border-radius: 0 5px 5px 5px;
+  }
 }
 
 .octave,
-.release {
+.release,
+.volume {
   border: 1px solid white;
   color: white;
   display: flex;
