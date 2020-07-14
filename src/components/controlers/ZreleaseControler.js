@@ -11,7 +11,7 @@ const ZReleaseController = (props) => {
       <div className="delay control">
         <input
           type="range"
-          min={0}
+          min={0.1}
           max={1}
           value={zRel}
           onChange={handleRelease}

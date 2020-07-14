@@ -3,6 +3,7 @@ const ZOctaveController = (props) => {
   const { zOct, setZoct } = props;
   const handaleOctave = (e) => {
     setZoct(e.target.value);
+    console.log(zOct);
   };
   return (
     <Fragment>
@@ -10,8 +11,8 @@ const ZOctaveController = (props) => {
       <div className="octave control">
         <input
           type="range"
-          min={1}
-          max={3}
+          min={0}
+          max={2}
           value={zOct}
           onChange={handaleOctave}
         />
