@@ -6,6 +6,7 @@ import ZReleaseController from "./controlers/ZreleaseControler";
 import ZvolumeControler from "./controlers/ZvolumeController";
 import ZwaveFormController from "./controlers/ZwaveFormController";
 import ZdelayController from "./controlers/ZdelayController";
+import ZenvelopControllers from "./controlers/evnelop_Controllers/ZenvelopController";
 
 const Zkeys = (props) => {
   const {
@@ -22,6 +23,8 @@ const Zkeys = (props) => {
     feedback,
     zDel,
     setZdel,
+    zEnv,
+    setZenv,
   } = props;
 
   const play = (note) => {
@@ -78,6 +81,10 @@ const Zkeys = (props) => {
           setZdel={setZdel}
           zDel={zDel}
         />
+        <ZenvelopControllers
+          zEnv={zEnv}
+          setZenv={setZenv}
+        ></ZenvelopControllers>
       </div>
     </div>
   );
