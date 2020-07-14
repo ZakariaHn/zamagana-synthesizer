@@ -1,7 +1,7 @@
 import React from "react";
 import * as Tone from "tone";
 import Zkeys from "./Zkeys";
-import Zcontrols from "./Zcontrols";
+import Zcontrols from "./controlers/Zcontrols";
 
 const Zsynth = (props) => {
   const {
@@ -20,7 +20,21 @@ const Zsynth = (props) => {
     zEnv,
     setZenv,
     zOsc,
+    zDefault,
+    setZdefault,
+    modalIsOpen,
+    setModalOpen,
   } = props;
+
+  const handleResetParameters = () => {
+    const { octave, oscillator, reverb, volume, delay, release } = zDefault;
+    setZoct(octave);
+    setZosc(oscillator);
+    setZrev(reverb);
+    setZvol(volume);
+    setZdel(delay);
+    setZrel(release);
+  };
 
   let zDelay = new Tone.FeedbackDelay({
     maxDelay: zDel.maxDelay,
@@ -55,7 +69,12 @@ const Zsynth = (props) => {
         setZosc={setZosc}
         zEnv={zEnv}
         setZenv={setZenv}
+        zDefault={zDefault}
+        setZdefault={setZdefault}
+        modalIsOpen={modalIsOpen}
+        setModalOpen={setModalOpen}
       />
+      <button onClick={handleResetParameters}>Reset all parameters</button>
     </div>
   );
 };

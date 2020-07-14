@@ -1,30 +1,36 @@
 import React, { Fragment, useState } from "react";
 import Zsynth from "./components/Zsynth";
 import notes from "./notes.json";
+import Zdefault from "./defaultParameters.json";
 
 const App = () => {
-  const [zNotes, setZnotes] = useState(notes);
-  const [zOsc, setZosc] = useState("triangle");
-  const [zEnv, setZenv] = useState({
-    attack: 0.8,
-    decay: 0.1,
-    sustain: 0.5,
-    release: 1,
-  });
+  const {
+    oscillator,
+    envelop,
+    delay,
+    release,
+    reverb,
+    volume,
+    octave,
+  } = Zdefault;
 
-  const [zVol, setZvol] = useState(40);
-  const [zOct, setZoct] = useState(1);
-  const [zRel, setZrel] = useState(0.1);
-  const [zRev, setZrev] = useState({ decay: 1.5, preDelay: 0.01 });
-  const [zDel, setZdel] = useState({
-    maxDelay: 9,
-    feedback: 0,
-  });
+  const [zDefault, setZdefault] = useState(Zdefault),
+    [zNotes, setZnotes] = useState(notes),
+    [zOsc, setZosc] = useState(oscillator),
+    [zEnv, setZenv] = useState(envelop),
+    [zVol, setZvol] = useState(volume),
+    [zOct, setZoct] = useState(octave),
+    [zRel, setZrel] = useState(release),
+    [zRev, setZrev] = useState(reverb),
+    [zDel, setZdel] = useState(delay),
+    [modalIsOpen, setModalOpen] = useState(false);
 
   return (
     <Fragment>
       <h1>Zamagana</h1>
       <Zsynth
+        zDefault={zDefault}
+        setZdefault={setZdefault}
         zNotes={zNotes}
         setZnotes={setZnotes}
         zOsc={zOsc}
@@ -41,6 +47,8 @@ const App = () => {
         setZrev={setZrev}
         zDel={zDel}
         setZdel={setZdel}
+        modalIsOpen={modalIsOpen}
+        setModalOpen={setModalOpen}
       />
     </Fragment>
   );
