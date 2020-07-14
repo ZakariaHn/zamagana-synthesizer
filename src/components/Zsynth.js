@@ -22,8 +22,13 @@ const Zsynth = (props) => {
     zVol,
     setZvol,
     setZosc,
+
+    zRev,
+    setZrev,
+
     zDel,
     setZdel,
+
   } = props;
 
   const { maxDelay, feedback } = props.zDel;
@@ -40,10 +45,15 @@ const Zsynth = (props) => {
         zVol={zVol}
         setZvol={setZvol}
         setZosc={setZosc}
+
+        zRev={zRev}
+        setZrev={setZrev}
+
         maxDelay={maxDelay}
         feedback={feedback}
         zDel={zDel}
         setZdel={setZdel}
+
       />
     </div>
   );

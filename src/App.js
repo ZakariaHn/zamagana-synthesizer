@@ -15,10 +15,14 @@ const App = () => {
   const [zVol, setZvol] = useState(-20);
   const [zOct, setZoct] = useState(2);
   const [zRel, setZrel] = useState(0.1);
+
+  const [zRev, setZrev] = useState({ decay: 1.5, preDelay: 0.01 });
+
   const [zDel, setZdel] = useState({
     maxDelay: 0,
     feedback: 0,
   });
+
 
   return (
     <Fragment>
@@ -36,8 +40,13 @@ const App = () => {
         setZoct={setZoct}
         zRel={zRel}
         setZrel={setZrel}
+
+        zRev={zRev}
+        setZrev={setZrev}
+
         zDel={zDel}
         setZdel={setZdel}
+
       />
     </Fragment>
   );
