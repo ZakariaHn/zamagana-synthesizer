@@ -3,46 +3,58 @@ import React from "react";
 const ZenvelopControllers = (props) => {
   const { zEnv, setZenv } = props;
 
-  //   const handleRelease = (e) => {
-  //     setZenv(e.target.value);
-  //   };
+  const handleAttack = (e) => {
+    setZenv({ ...zEnv, attack: e.target.value });
+    console.log(zEnv);
+  };
 
+  const handleDecay = (e) => {
+    setZenv({ ...zEnv, decay: e.target.value });
+    console.log(zEnv);
+  };
+
+  const handleSustain = (e) => {
+    setZenv({ ...zEnv, sustain: e.target.value });
+    console.log(zEnv);
+  };
+
+  const handleRelease = (e) => {
+    setZenv({ ...zEnv, release: e.target.value });
+    console.log(zEnv);
+  };
   return (
     <div className="envelop control">
-      {/* <div>
+      <div className="attackSlider">
         <p>Attack</p>
         <input
           type="range"
-          min={-60}
-          max={40}
+          min={0}
+          max={10}
           value={zEnv.attack}
-          className="attack"
-          onChange={handleRelease}
+          onChange={handleAttack}
         />
       </div>
-      <div>
+      <div className="decaySlider">
         <p>Decay</p>
         <input
           type="range"
-          min={-60}
-          max={40}
+          min={0}
+          max={10}
           value={zEnv.decay}
-          className="decay"
-          onChange={handleRelease}
+          onChange={handleDecay}
         />
       </div>
-      <div>
+      <div className="sustainSlider">
         <p>Sustain</p>
         <input
           type="range"
-          min={-60}
-          max={40}
+          min={0}
+          max={10}
           value={zEnv.sustain}
-          className="sustain"
-          onChange={handleRelease}
+          onChange={handleSustain}
         />
-      </div> */}
-      {/* <div>
+      </div>
+      <div className="releaseSlider">
         <p>Release</p>
         <input
           onChange={handleRelease}
@@ -50,10 +62,8 @@ const ZenvelopControllers = (props) => {
           min={0}
           max={10}
           defaultValue={0}
-          className="release"
-          step="1"
         />
-      </div> */}
+      </div>
     </div>
   );
 };
