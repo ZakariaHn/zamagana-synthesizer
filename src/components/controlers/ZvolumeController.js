@@ -5,11 +5,6 @@ const ZvolumeControler = (props) => {
   };
   return (
     <Fragment>
-      {/* <ul className="volume">
-        <li onClick={() => props.setZvol((x) => x + 1)}>+</li>
-        <li>Volume: {props.zVol}</li>
-        <li onClick={() => props.setZvol((x) => x - 1)}>-</li>
-      </ul> */}
       <div className="volumeSliderTiltle">vol</div>
       <div className="volume control">
         <input
