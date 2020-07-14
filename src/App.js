@@ -22,8 +22,7 @@ const App = () => {
     [zOct, setZoct] = useState(octave),
     [zRel, setZrel] = useState(release),
     [zRev, setZrev] = useState(reverb),
-    [zDel, setZdel] = useState(delay),
-    [modalIsOpen, setModalOpen] = useState(false);
+    [zDel, setZdel] = useState(delay);
 
   return (
     <Fragment>
@@ -47,8 +46,6 @@ const App = () => {
         setZrev={setZrev}
         zDel={zDel}
         setZdel={setZdel}
-        modalIsOpen={modalIsOpen}
-        setModalOpen={setModalOpen}
       />
     </Fragment>
   );

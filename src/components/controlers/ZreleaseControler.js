@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 const ZReleaseController = (props) => {
   const { zRel, setZrel } = props;
+
   const handleRelease = (e) => {
     setZrel(e.target.value);
-    console.log(zRel);
   };
   return (
     <Fragment>

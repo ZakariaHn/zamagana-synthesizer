@@ -1,16 +1,7 @@
-import React, { useState, useRef } from "react";
-import { Popover, OverlayTrigger, Button } from "react-bootstrap";
+import React from "react";
 
 const ZenvelopControllers = (props) => {
-  const [show, setShow] = useState(false);
-  const [target, setTarget] = useState(null);
-  const ref = useRef(null);
-
-  const handleClick = (event) => {
-    setShow(!show);
-    setTarget(event.target);
-  };
-  const { zEnv, setZenv, zDefault, modalIsOpen, setModalOpen } = props;
+  const { zEnv, setZenv } = props;
 
   const handleAttack = (e) => {
     setZenv({ ...zEnv, attack: e.target.value });
