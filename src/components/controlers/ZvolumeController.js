@@ -3,6 +3,7 @@ const ZvolumeControler = (props) => {
   const handaleVolume = (e) => {
     props.setZvol(e.target.value);
   };
+
   return (
     <Fragment>
       <div className="volumeSliderTiltle">vol</div>

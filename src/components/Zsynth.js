@@ -12,6 +12,12 @@ const Zsynth = (props) => {
   let zsynth = new Tone.Synth({
     volume: props.zVol,
     oscillator: { type: props.zOsc },
+    envelope: {
+      attack: props.zEnv.attack,
+      decay: props.zEnv.decay,
+      sustain: props.zEnv.sustain,
+      release: props.zEnv.release,
+    },
   }).connect(zDelay);
 
   const {
