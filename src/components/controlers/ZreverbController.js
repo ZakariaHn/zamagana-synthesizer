@@ -45,7 +45,7 @@ const ZreverbController = (props) => {
             onClick={() =>
               props.setZrev({
                 ...props.zRev,
-                decay: props.zRev.decay.value - 1,
+                decay: props.zRev.decay - 1,
               })
             }
           >
@@ -68,7 +68,7 @@ const ZreverbController = (props) => {
             onClick={() =>
               props.setZrev({
                 ...props.zRev,
-                preDelay: props.zRev.preDelay.value - 1,
+                preDelay: props.zRev.preDelay - 1,
               })
             }
           >
