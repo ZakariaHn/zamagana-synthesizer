@@ -1,31 +1,9 @@
 import React from "react";
 import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
-import ZOctaveController from "./controlers/ZOctaveController";
-import ZReleaseController from "./controlers/ZreleaseControler";
-import ZvolumeControler from "./controlers/ZvolumeController";
-import ZwaveFormController from "./controlers/ZwaveFormController";
-import ZdelayController from "./controlers/ZdelayController";
-import ZenvelopControllers from "./controlers/evnelop_Controllers/ZenvelopController";
 
 const Zkeys = (props) => {
-  const {
-    zOct,
-    zNotes,
-    zRel,
-    zVol,
-    zsynth,
-    setZvol,
-    setZrel,
-    setZoct,
-    setZosc,
-    maxDelay,
-    feedback,
-    zDel,
-    setZdel,
-    zEnv,
-    setZenv,
-  } = props;
+  const { zOct, zNotes, zRel, zsynth } = props;
 
   const play = (note) => {
     Tone.start();
@@ -70,22 +48,6 @@ const Zkeys = (props) => {
           })
         }
       />
-      <div className="controllers">
-        <ZvolumeControler zVol={zVol} setZvol={setZvol} />
-        <ZReleaseController zRel={zRel} setZrel={setZrel} />
-        <ZOctaveController zOct={zOct} setZoct={setZoct} />
-        <ZwaveFormController setZosc={setZosc} />
-        <ZdelayController
-          maxDelay={maxDelay}
-          feedback={feedback}
-          setZdel={setZdel}
-          zDel={zDel}
-        />
-        <ZenvelopControllers
-          zEnv={zEnv}
-          setZenv={setZenv}
-        ></ZenvelopControllers>
-      </div>
     </div>
   );
 };
