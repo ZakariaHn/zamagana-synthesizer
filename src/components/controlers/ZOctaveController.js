@@ -1,10 +1,13 @@
 import React, { Fragment } from "react";
+
 const ZOctaveController = (props) => {
   const { zOct, setZoct } = props;
+
   const handaleOctave = (e) => {
     setZoct(e.target.value);
     console.log(zOct);
   };
+
   return (
     <Fragment>
       <div className="octaveSliderTiltle">Octave</div>
