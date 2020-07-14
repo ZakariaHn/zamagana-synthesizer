@@ -23,7 +23,6 @@ const App = () => {
     feedback: 0,
   });
 
-
   return (
     <Fragment>
       <h1>Zamagana</h1>
@@ -40,13 +39,10 @@ const App = () => {
         setZoct={setZoct}
         zRel={zRel}
         setZrel={setZrel}
-
         zRev={zRev}
         setZrev={setZrev}
-
         zDel={zDel}
         setZdel={setZdel}
-
       />
     </Fragment>
   );

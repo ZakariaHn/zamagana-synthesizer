@@ -4,15 +4,15 @@ import Zkeys from "./Zkeys";
 import Zcontrols from "./Zcontrols";
 
 const Zsynth = (props) => {
-  let delay = new Tone.FeedbackDelay({
+  let zDelay = new Tone.FeedbackDelay({
     maxDelay: props.zDel.maxDelay,
     feedback: props.zDel.feedback,
   }).toMaster();
 
-  var zsynth = new Tone.Synth({
+  let zsynth = new Tone.Synth({
     volume: props.zVol,
     oscillator: { type: props.zOsc },
-  }).connect(delay);
+  }).connect(zDelay);
 
   const {
     zNotes,
@@ -27,9 +27,9 @@ const Zsynth = (props) => {
     setZrev,
     zDel,
     setZdel,
+    zEnv,
+    setZenv,
   } = props;
-
-  const { maxDelay, feedback } = props.zDel;
 
   return (
     <div className="zsynth">
@@ -39,15 +39,15 @@ const Zsynth = (props) => {
         setZdel={setZdel}
         zVol={zVol}
         setZvol={setZvol}
-        maxDelay={maxDelay}
-        feedback={feedback}
         zRev={zRev}
         setZrev={setZrev}
         zRel={zRel}
-        zOct={zOct}
-        setZosc={setZosc}
         setZrel={setZrel}
+        zOct={zOct}
         setZoct={setZoct}
+        setZosc={setZosc}
+        zEnv={zEnv}
+        setZenv={setZenv}
       />
     </div>
   );
