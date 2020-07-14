@@ -4,7 +4,6 @@ const ZdelayController = (props) => {
   const { zDel, setZdel } = props;
   const incrementDelay = () => {
     setZdel({ ...zDel, feedback: zDel.feedback + 0.1 });
-    console.log(zDel.feedback);
   };
   const decrementDelay = () => {
     setZdel({ ...zDel, feedback: zDel.feedback - 0.1 });
