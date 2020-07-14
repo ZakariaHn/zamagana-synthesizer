@@ -96,7 +96,8 @@ div:nth-child(12) {
 .release,
 .volume,
 .reverb,
-.delay {
+.delay,
+.reverb-control {
   border: 1px solid white;
   color: white;
   display: flex;
@@ -126,4 +127,15 @@ div:nth-child(12) {
 
 .volumeSliderTiltle {
   color: white;
+}
+
+.reverb-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.reverb-decay,
+.reverb-preDelay {
+  padding: 2rem;
 }
