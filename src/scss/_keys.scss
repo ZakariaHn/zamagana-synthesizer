@@ -95,7 +95,11 @@ div:nth-child(12) {
 .octave,
 .release,
 .volume,
+
 .reverb {
+
+.delay {
+
   border: 1px solid white;
   color: white;
   display: flex;
@@ -104,7 +108,7 @@ div:nth-child(12) {
   justify-content: center;
   list-style: none;
   height: 2rem;
-  width: rem;
+  width: 8rem;
   margin-left: 0.5rem;
   & * {
     cursor: pointer;
@@ -112,4 +116,17 @@ div:nth-child(12) {
     height: 1rem;
     color: white;
   }
+}
+
+.formController {
+  height: 2rem;
+  width: 8rem;
+  margin-left: 0.5rem;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.volumeSliderTiltle {
+  color: white;
 }
