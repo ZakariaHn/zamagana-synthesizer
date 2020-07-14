@@ -10,7 +10,7 @@ const ZvolumeControler = (props) => {
       <div className="volume control">
         <input
           type="range"
-          min={-60}
+          min={-10}
           max={40}
           value={props.zVol}
           onChange={handaleVolume}

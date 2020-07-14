@@ -25,7 +25,7 @@ const ZenvelopControllers = (props) => {
   const handleResetEnvelop = () => {
     setZenv({
       ...zEnv,
-      attack: 0.01,
+      attack: 0.8,
       decay: 0.1,
       sustain: 0.5,
       release: 1,
