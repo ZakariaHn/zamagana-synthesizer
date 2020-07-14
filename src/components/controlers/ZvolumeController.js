@@ -16,7 +16,7 @@ const ZvolumeControler = (props) => {
         min={-60}
         max={40}
         value={props.zVol}
-        className="volumeSlider"
+        className="volume controller"
         onChange={handaleVolume}
       />
     </Fragment>

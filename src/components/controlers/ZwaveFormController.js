@@ -3,7 +3,7 @@ import React from "react";
 const ZwaveFormController = (props) => {
   return (
     <select
-      className="formController"
+      className="waveForm controller"
       onChange={(e) => props.setZosc(e.target.value)}
     >
       <option value="sine">Sine</option>
