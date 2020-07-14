@@ -11,14 +11,15 @@ const ZvolumeControler = (props) => {
         <li onClick={() => props.setZvol((x) => x - 1)}>-</li>
       </ul> */}
       <div className="volumeSliderTiltle">vol</div>
-      <input
-        type="range"
-        min={-60}
-        max={40}
-        value={props.zVol}
-        className="volume controller"
-        onChange={handaleVolume}
-      />
+      <div className="volume control">
+        <input
+          type="range"
+          min={-60}
+          max={40}
+          value={props.zVol}
+          onChange={handaleVolume}
+        />
+      </div>
     </Fragment>
   );
 };

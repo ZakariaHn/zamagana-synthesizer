@@ -8,7 +8,7 @@ const ZenvelopControllers = (props) => {
   //   };
 
   return (
-    <div className="envelopControllers">
+    <div className="envelop control">
       {/* <div>
         <p>Attack</p>
         <input

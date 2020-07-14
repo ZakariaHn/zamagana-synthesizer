@@ -10,11 +10,13 @@ const ZdelayController = (props) => {
     setZdel({ ...zDel, feedback: zDel.feedback - 0.1 });
   };
   return (
-    <ul className="delay">
-      <li onClick={incrementDelay}>+</li>
-      <li>Delay</li>
-      <li onClick={decrementDelay}>-</li>
-    </ul>
+    <div className="delay control">
+      <ul>
+        <li onClick={incrementDelay}>+</li>
+        <li>Delay</li>
+        <li onClick={decrementDelay}>-</li>
+      </ul>
+    </div>
   );
 };
 
