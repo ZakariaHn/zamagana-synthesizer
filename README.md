@@ -25,6 +25,60 @@
 - open new window with further options (eventually)
 - user should be able to change the key's assignment(eventually)
 
+- Zsynth (contains the effects imported from the library tone.js)
+
+```
+
+
+  // Delay
+
+  let zDelay = new Tone.FeedbackDelay({
+    maxDelay: zDel.maxDelay,
+    feedback: zDel.feedback,
+  }).toMaster();
+
+  // Reverb
+
+  let zReverb = new Tone.JCReverb({
+    roomSize: props.zRev.roomSize,
+  }).toMaster();
+
+  // Pahser
+
+  let Zphaser = new Tone.Phaser({
+    frequency: zPhs.frequency,
+    octaves: zPhs.octaves,
+    stages: zPhs.stages,
+    Q: zPhs.Q,
+    baseFrequency: zPhs.baseFrequency,
+  }).toMaster();
+
+  // Vibrato
+
+  let Zvibrato = new Tone.Vibrato({
+    frequency: zVib.frequency,
+    depth: zVib.depth,
+  }).toMaster();
+
+  /*
+   * assigning the Imported Synth to a the variable zsynth
+   * assigning values to its oscillator & envelop from the state
+   * connect the the effects to the synth using .chain() methode
+   */
+
+  let zsynth = new Tone.Synth({
+    volume: zVol,
+    oscillator: { type: zOsc },
+    envelope: {
+      attack: zEnv.attack,
+      decay: zEnv.decay,
+      sustain: zEnv.sustain,
+      release: zEnv.release,
+    },
+  }).chain(zDelay, Zvibrato, Zphaser, zReverb);
+
+```
+
 ## Interface
 
 - keyboard-looking keys
@@ -95,10 +149,10 @@ Project
 │   └───helpers.js
 │   └───scss
 │   │     └───main
-│   │           └───_base.scss
-│   │           └───_controls.scss
-│   │           └───_keyboard.scss
-│   │           └───_normalize.scss
+│   │     └───_base.scss
+│   │     └───_controls.scss
+│   │     └───_keyboard.scss
+│   │     └───_normalize.scss
 │   └───notes.json
 │   └───defaultParameters.json
 │
@@ -107,3 +161,5 @@ Project
      └───index.html
 
 ```
+
+## Progress
