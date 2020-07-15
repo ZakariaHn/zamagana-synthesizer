@@ -27,6 +27,13 @@ const App = () => {
   return (
     <Fragment>
       <h1>Zamagana</h1>
+      <h3>
+        Browser-synth built with{" "}
+        <a href="https://tonejs.github.io/" target="_blank">
+          Tone.js{" "}
+        </a>
+        and <a href="https://reactjs.org/">React.js</a>
+      </h3>
       <Zsynth
         zDefault={zDefault}
         setZdefault={setZdefault}

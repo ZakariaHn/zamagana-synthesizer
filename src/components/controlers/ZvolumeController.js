@@ -6,8 +6,8 @@ const ZvolumeControler = (props) => {
 
   return (
     <Fragment>
-      <div className="volumeSliderTiltle">vol</div>
       <div className="volume control">
+        vol
         <input
           type="range"
           min={-10}

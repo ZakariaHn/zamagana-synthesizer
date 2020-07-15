@@ -54,7 +54,6 @@ const Zsynth = (props) => {
 
   return (
     <div className="zsynth">
-      <Zkeys zNotes={zNotes} zsynth={zsynth} zRel={zRel} zOct={zOct} />
       <Zcontrols
         zDel={zDel}
         setZdel={setZdel}
@@ -74,6 +73,7 @@ const Zsynth = (props) => {
         modalIsOpen={modalIsOpen}
         setModalOpen={setModalOpen}
       />
+      <Zkeys zNotes={zNotes} zsynth={zsynth} zRel={zRel} zOct={zOct} />
       <button onClick={handleResetParameters}>Reset all parameters</button>
     </div>
   );

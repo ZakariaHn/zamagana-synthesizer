@@ -1,0 +1,16 @@
+.controllers {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  .control {
+    color: #fff;
+    padding-right: 1rem;
+  }
+}
+
+li {
+  list-style: none;
+}

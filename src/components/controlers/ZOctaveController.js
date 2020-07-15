@@ -10,8 +10,8 @@ const ZOctaveController = (props) => {
 
   return (
     <Fragment>
-      <div className="octaveSliderTiltle">Octave</div>
       <div className="octave control">
+        Octave
         <input
           type="range"
           min={0}
