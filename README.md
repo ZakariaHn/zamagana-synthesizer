@@ -163,13 +163,36 @@ Zamagana Synth
 
 ## Progress
 
-| date       | plans / achievements                        |
-| ---------- | ------------------------------------------- |
-| 08.07.2020 | - think of the features we want for the app |
-| 08.07.2020 | - create a github repository                |
-| 08.07.2020 | - create a react project                    |
-| 08.07.2020 | - check the API and read the documentation  |
-| 09.07.2020 | Content column 2                            |
-| 13.07.2020 | Content cell 2                              |
-| 14.07.2020 | Content column 2                            |
-| 15.07.2020 | Content cell 2                              |
+| date       | plans / achievements                                                                  |
+| ---------- | ------------------------------------------------------------------------------------- |
+| 08.07.2020 | - think of the features we want for the app                                           |
+|            | - create a github repository                                                          |
+|            | - create a react project                                                              |
+|            | - check the API and read the documentation                                            |
+| 09.07.2020 | - click event to produce sound                                                        |
+|            | - main app state --> how many octaves are in the keyboard                             |
+|            | - notes: C-B                                                                          |
+|            | - components : zcontrols, zsynth and zkeys                                            |
+|            | -zkeys --> renders inside of zsynth in some kind of button that plays onClick         |
+|            | -zcontrols--> pass an object and it will change the tone we will pass props into that |
+|            | -zsynth--> main component                                                             |
+| 13.07.2020 | - dropdown menu                                                                       |
+|            | - connect the Zsynthtypeswitcher with the rest                                        |
+|            | - option to modulate the shape of the wave                                            |
+|            | - add it first in the Zkey component and then see how to split components             |
+|            | - further components : zOsc, zVol, zNotes                                             |
+|            | - envelop controller                                                                  |
+| 14.07.2020 | - turn state into functional compornent                                               |
+|            | - component folder --> zcontrols --> renders all the controls                         |
+|            | - oscillator type                                                                     |
+|            | - set up classNames                                                                   |
+|            | - styling after classNames                                                            |
+|            | - keyboard --> loading spinner                                                        |
+|            | - presets default (all presets together in a file) --> defaultParameter json          |
+|            | - more controllers                                                                    |
+|            | - octave change controller                                                            |
+| 15.07.2020 | - implement vibratto                                                                  |
+|            | - reverb to slider                                                                    |
+|            | - update reverb component                                                             |
+|            | - pop up window                                                                       |
+|            | - phaser                                                                              |
