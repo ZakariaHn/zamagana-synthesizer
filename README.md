@@ -99,7 +99,7 @@
 - wave form controller menu
 - choose Synth type menu (evtl)
 
-![interface img 1](./src/img/readme_img/interface_img_1.png)
+![interface_img_1](./src/img/readme_img/interface_img_1.png)
 
 ## Technologies
 
