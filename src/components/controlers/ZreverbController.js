@@ -1,80 +1,36 @@
 import React, { Fragment } from "react";
+
 const ZreverbController = (props) => {
   const { zRev, setZrev } = props;
-  //   const handleReverb = (e) => {
-  //     props.setZrev(e.target.value);
-  //   };
-  return (
-    // <Fragment>
-    //   <div className="reverbSliderTiltle">
-    //     {" "}
-    //     <div className="reverb-control">
-    //       <input
-    //         type="range"
-    //         min={-4}
-    //         max={4}
-    //         value={props.zRev.decay}
-    //         onChange={handleReverb}
-    //       />{" "}
-    //       <input
-    //         type="range"
-    //         min={-1}
-    //         max={1}
-    //         value={props.zRev.preDelay}
-    //         onChange={handleReverb}
-    //       />
-    //     </div>
-    //   </div>
-    // </Fragment>
 
+  const handleDecayIncrease = () => {
+    setZrev({ ...zRev, decay: zRev.decay + 1 });
+  };
+
+  const handleDecayDecrease = () => {
+    setZrev({ ...zRev, decay: zRev.decay - 0.5 });
+  };
+
+  const handlePreDelayIncrease = () => {
+    setZrev({ ...zRev, preDelay: zRev.preDelay + 1 });
+  };
+
+  const handlePreDelayDecrease = () => {
+    setZrev({ ...zRev, preDelay: zRev.preDelay - 1 });
+  };
+
+  return (
     <Fragment>
-      <div className="reverb-control control">
-        Reverb
+      <div className="reverb-control">
         <ul className="reverb-decay">
-          <li
-            onClick={() =>
-              props.setZrev({
-                ...props.zRev,
-                decay: props.zRev.decay + 1,
-              })
-            }
-          >
-            +
-          </li>
+          <li onClick={handleDecayIncrease}>+</li>
           <li>decay{props.zRev.decay}</li>
-          <li
-            onClick={() =>
-              props.setZrev({
-                ...props.zRev,
-                decay: props.zRev.decay - 1,
-              })
-            }
-          >
-            -
-          </li>
+          <li onClick={handleDecayDecrease}>-</li>
         </ul>
         <ul className="reverb-preDelay">
-          <li
-            onClick={() =>
-              props.setZrev({
-                ...props.zRev,
-                preDelay: props.zRev.preDelay + 1,
-              })
-            }
-          >
-            +
-          </li>
+          <li onClick={handlePreDelayIncrease}>+</li>
           <li>preDelay{props.zRev.preDelay}</li>
-          <li
-            onClick={() =>
-              props.setZrev({
-                ...props.zRev,
-                preDelay: props.zRev.preDelay - 1,
-              })
-            }
-          >
-            -
-          </li>
+          <li onClick={handlePreDelayDecrease}>-</li>
         </ul>
       </div>
     </Fragment>
