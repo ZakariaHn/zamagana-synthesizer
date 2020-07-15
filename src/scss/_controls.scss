@@ -1,0 +1,15 @@
+.controllers {
+  border: solid 1px red;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  .control {
+    color: #fff;
+    border: solid 1px red;
+  }
+}
+
+li {
+  list-style: none;
+}
