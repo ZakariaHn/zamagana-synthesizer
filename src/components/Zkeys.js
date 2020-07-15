@@ -1,10 +1,11 @@
 import React from "react";
 import * as Tone from "tone";
-import KeyboardEventHandler from "react-keyboard-event-handler";
-import Highlighter from "react-highlight-words";
+import KeyboardEventHandler from "react-keyboard-event-handler"; // A component from React to handle keyboard Keys
 
 const Zkeys = (props) => {
   const { zOct, zNotes, zRel, zsynth } = props;
+
+  // This function initiate the note to be played by applying the Tone.js methouds (.start() & .triggerAttackRelease())
 
   const play = (note) => {
     Tone.start();
@@ -12,6 +13,7 @@ const Zkeys = (props) => {
     zsynth.triggerAttackRelease(octavedNote, zRel);
   };
 
+  // in process
   const Cminor = zNotes.filter(
     (obj) =>
       obj.id !== 2 &&
@@ -21,6 +23,15 @@ const Zkeys = (props) => {
       obj.id !== 12
   );
 
+  /*
+  In the return we are:
+
+    * applying .map() method on zNotes( which represents note.json) 
+      and rendering the synth keys and setting it's class based on the data entered there.
+    
+    * using the react component "KeyboardEventHandler"
+      and mapping again on Znotes in order to assign the keyboard that'll trigger the synth keys
+ */
   return (
     <div>
       <div className="set">

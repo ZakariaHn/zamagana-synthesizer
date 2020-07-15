@@ -12,7 +12,7 @@ const ZreverbController = (props) => {
         reverb
         <input
           type="range"
-          min={0.0}
+          min={0}
           max={1}
           value={zRev.roomSize}
           onChange={handleReverb}
