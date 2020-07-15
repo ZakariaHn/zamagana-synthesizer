@@ -116,8 +116,7 @@
 ## Project Structure
 
 ```
-
-Project
+Zamagana Synth
 │
 │ README.md
 | .gitignore
@@ -163,3 +162,14 @@ Project
 ```
 
 ## Progress
+
+| date       | plans / achievements                        |
+| ---------- | ------------------------------------------- |
+| 08.07.2020 | - think of the features we want for the app |
+| 08.07.2020 | - create a github repository                |
+| 08.07.2020 | - create a react project                    |
+| 08.07.2020 | - check the API and read the documentation  |
+| 09.07.2020 | Content column 2                            |
+| 13.07.2020 | Content cell 2                              |
+| 14.07.2020 | Content column 2                            |
+| 15.07.2020 | Content cell 2                              |
