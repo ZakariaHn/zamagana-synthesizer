@@ -28,8 +28,6 @@
 - Zsynth (contains the effects imported from the library tone.js)
 
 ```
-
-
   // Delay
 
   let zDelay = new Tone.FeedbackDelay({
@@ -100,6 +98,8 @@
 - reset all parameters button
 - wave form controller menu
 - choose Synth type menu (evtl)
+
+![interface img 1](./src/img/readme_img/interface_img_1.png)
 
 ## Technologies
 
