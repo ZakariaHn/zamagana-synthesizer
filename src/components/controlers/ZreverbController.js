@@ -3,35 +3,21 @@ import React, { Fragment } from "react";
 const ZreverbController = (props) => {
   const { zRev, setZrev } = props;
 
-  const handleDecayIncrease = () => {
-    setZrev({ ...zRev, decay: zRev.decay + 1 });
+  const handleReverb = (e) => {
+    setZrev({ ...zRev, roomSize: e.target.value });
   };
-
-  const handleDecayDecrease = () => {
-    setZrev({ ...zRev, decay: zRev.decay - 0.5 });
-  };
-
-  const handlePreDelayIncrease = () => {
-    setZrev({ ...zRev, preDelay: zRev.preDelay + 1 });
-  };
-
-  const handlePreDelayDecrease = () => {
-    setZrev({ ...zRev, preDelay: zRev.preDelay - 1 });
-  };
-
   return (
     <Fragment>
       <div className="reverb-control">
-        <ul className="reverb-decay">
-          <li onClick={handleDecayIncrease}>+</li>
-          <li>decay{props.zRev.decay}</li>
-          <li onClick={handleDecayDecrease}>-</li>
-        </ul>
-        <ul className="reverb-preDelay">
-          <li onClick={handlePreDelayIncrease}>+</li>
-          <li>preDelay{props.zRev.preDelay}</li>
-          <li onClick={handlePreDelayDecrease}>-</li>
-        </ul>
+        reverb{props.zRev.roomSize}
+        <input
+          type="range"
+          min={0.0}
+          max={1}
+          value={zRev.roomSize}
+          onChange={handleReverb}
+          step="0.1"
+        />
       </div>
     </Fragment>
   );
