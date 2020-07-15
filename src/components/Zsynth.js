@@ -9,10 +9,15 @@ const Zsynth = (props) => {
     feedback: props.zDel.feedback,
   }).toMaster();
 
+  let reverb = new Tone.Reverb({
+    decay: props.zRev.decay,
+    // preDelay: props.zRev.preDelay,
+  }).toMaster();
+
   var zsynth = new Tone.Synth({
     volume: props.zVol,
     oscillator: { type: props.zOsc },
-  }).connect(delay);
+  }).connect(delay, reverb);
 
   const {
     zNotes,
