@@ -1,25 +1,9 @@
 import React from "react";
 import * as Tone from "tone";
 import Zkeys from "./Zkeys";
-import Zcontrols from "./Zcontrols";
+import Zcontrols from "./controlers/Zcontrols";
 
 const Zsynth = (props) => {
-  let zDelay = new Tone.FeedbackDelay({
-    maxDelay: props.zDel.maxDelay,
-    feedback: props.zDel.feedback,
-  }).toMaster();
-
-  let zsynth = new Tone.Synth({
-    volume: props.zVol,
-    oscillator: { type: props.zOsc },
-    envelope: {
-      attack: props.zEnv.attack,
-      decay: props.zEnv.decay,
-      sustain: props.zEnv.sustain,
-      release: props.zEnv.release,
-    },
-  }).connect(zDelay);
-
   const {
     zNotes,
     zOct,
@@ -35,7 +19,38 @@ const Zsynth = (props) => {
     setZdel,
     zEnv,
     setZenv,
+    zOsc,
+    zDefault,
+    setZdefault,
+    modalIsOpen,
+    setModalOpen,
   } = props;
+
+  const handleResetParameters = () => {
+    const { octave, oscillator, reverb, volume, delay, release } = zDefault;
+    setZoct(octave);
+    setZosc(oscillator);
+    setZrev(reverb);
+    setZvol(volume);
+    setZdel(delay);
+    setZrel(release);
+  };
+
+  let zDelay = new Tone.FeedbackDelay({
+    maxDelay: zDel.maxDelay,
+    feedback: zDel.feedback,
+  }).toMaster();
+
+  let zsynth = new Tone.Synth({
+    volume: zVol,
+    oscillator: { type: zOsc },
+    envelope: {
+      attack: zEnv.attack,
+      decay: zEnv.decay,
+      sustain: zEnv.sustain,
+      release: zEnv.release,
+    },
+  }).connect(zDelay);
 
   return (
     <div className="zsynth">
@@ -53,8 +68,13 @@ const Zsynth = (props) => {
         setZosc={setZosc}
         zEnv={zEnv}
         setZenv={setZenv}
+        zDefault={zDefault}
+        setZdefault={setZdefault}
+        modalIsOpen={modalIsOpen}
+        setModalOpen={setModalOpen}
       />
       <Zkeys zNotes={zNotes} zsynth={zsynth} zRel={zRel} zOct={zOct} />
+      <button onClick={handleResetParameters}>Reset all parameters</button>
     </div>
   );
 };

@@ -22,6 +22,15 @@ const ZenvelopControllers = (props) => {
     setZenv({ ...zEnv, release: e.target.value });
     console.log(zEnv);
   };
+  const handleResetEnvelop = () => {
+    setZenv({
+      ...zEnv,
+      attack: 0.8,
+      decay: 0.1,
+      sustain: 0.5,
+      release: 2,
+    });
+  };
 
   return (
     <div className="envelop control">
@@ -29,8 +38,8 @@ const ZenvelopControllers = (props) => {
         <p>Attack</p>
         <input
           type="range"
-          min={0}
-          max={2}
+          min={0.1}
+          max={2.1}
           step="0.2"
           value={zEnv.attack}
           onChange={handleAttack}
@@ -40,8 +49,8 @@ const ZenvelopControllers = (props) => {
         <p>Decay</p>
         <input
           type="range"
-          min={0}
-          max={2}
+          min={0.1}
+          max={2.1}
           step="0.2"
           value={zEnv.decay}
           onChange={handleDecay}
@@ -51,8 +60,8 @@ const ZenvelopControllers = (props) => {
         <p>Sustain</p>
         <input
           type="range"
-          min={0}
-          max={2}
+          min={0.1}
+          max={2.1}
           step="0.2"
           value={zEnv.sustain}
           onChange={handleSustain}
@@ -63,11 +72,13 @@ const ZenvelopControllers = (props) => {
         <input
           onChange={handleRelease}
           type="range"
-          min={0}
-          max={10}
-          defaultValue={0}
+          min={0.1}
+          max={10.1}
+          step="0.5"
+          value={zEnv.release}
         />
       </div>
+      <button onClick={handleResetEnvelop}>Reset Envelop</button>
     </div>
   );
 };
