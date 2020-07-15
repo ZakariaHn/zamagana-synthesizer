@@ -58,7 +58,7 @@ const Zsynth = (props) => {
   }).connect(zDelay);
 
   return (
-    <div className="zsynth">
+    <div className="zsynth" id="zSynth">
       <Zcontrols
         zDel={zDel}
         setZdel={setZdel}
