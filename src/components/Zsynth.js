@@ -41,6 +41,11 @@ const Zsynth = (props) => {
     feedback: zDel.feedback,
   }).toMaster();
 
+  let reverb = new Tone.Reverb({
+    decay: props.zRev.decay,
+    // preDelay: props.zRev.preDelay,
+  }).toMaster();
+
   let zsynth = new Tone.Synth({
     volume: zVol,
     oscillator: { type: zOsc },
