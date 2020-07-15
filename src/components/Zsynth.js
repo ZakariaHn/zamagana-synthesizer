@@ -45,23 +45,6 @@ const Zsynth = (props) => {
     setZrel(release);
   };
 
-  /*
-   * assigning the Imported Synth to a the variable zsynth
-   * assigning values to its oscillator & envelop from the state
-   * connect the the effects to the synth using .chain() methode
-   */
-
-  let zsynth = new Tone.Synth({
-    volume: zVol,
-    oscillator: { type: zOsc },
-    envelope: {
-      attack: zEnv.attack,
-      decay: zEnv.decay,
-      sustain: zEnv.sustain,
-      release: zEnv.release,
-    },
-  }).chain(zDelay, Zvibrato, Zphaser, zReverb);
-
   // =============== Adding Effects =================
 
   // Delay
@@ -93,6 +76,23 @@ const Zsynth = (props) => {
     frequency: zVib.frequency,
     depth: zVib.depth,
   }).toMaster();
+
+  /*
+   * assigning the Imported Synth to a the variable zsynth
+   * assigning values to its oscillator & envelop from the state
+   * connect the the effects to the synth using .chain() methode
+   */
+
+  let zsynth = new Tone.Synth({
+    volume: zVol,
+    oscillator: { type: zOsc },
+    envelope: {
+      attack: zEnv.attack,
+      decay: zEnv.decay,
+      sustain: zEnv.sustain,
+      release: zEnv.release,
+    },
+  }).chain(zDelay, Zvibrato, Zphaser, zReverb);
 
   return (
     <div className="zsynth">
