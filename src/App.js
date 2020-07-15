@@ -12,6 +12,8 @@ const App = () => {
     reverb,
     volume,
     octave,
+    vibrato,
+    phaser,
   } = Zdefault;
 
   const [zDefault, setZdefault] = useState(Zdefault),
@@ -22,13 +24,15 @@ const App = () => {
     [zOct, setZoct] = useState(octave),
     [zRel, setZrel] = useState(release),
     [zRev, setZrev] = useState(reverb),
-    [zDel, setZdel] = useState(delay);
+    [zDel, setZdel] = useState(delay),
+    [zVib, setZvib] = useState(vibrato),
+    [zPhs, setZphs] = useState(phaser);
 
   return (
     <Fragment>
       <h1>Zamagana</h1>
       <h3>
-        Browser-synth built with{" "}
+        Browser-synth built with
         <a href="https://tonejs.github.io/" target="_blank">
           Tone.js{" "}
         </a>
@@ -53,6 +57,10 @@ const App = () => {
         setZrev={setZrev}
         zDel={zDel}
         setZdel={setZdel}
+        zVib={zVib}
+        setZvib={setZvib}
+        zPhs={zPhs}
+        setZphs={setZphs}
       />
     </Fragment>
   );
