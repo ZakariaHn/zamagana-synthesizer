@@ -1,33 +1,42 @@
 import React, { Fragment, useState } from "react";
 import Zsynth from "./components/Zsynth";
 import notes from "./notes.json";
+import Zdefault from "./defaultParameters.json";
 
 const App = () => {
-  const [zNotes, setZnotes] = useState(notes);
-  const [zOsc, setZosc] = useState("triangle");
-  const [zEnv, setZenv] = useState({
-    attack: 1,
-    decay: 0.1,
-    sustain: 2,
-    release: 4,
-  });
+  const {
+    oscillator,
+    envelop,
+    delay,
+    release,
+    reverb,
+    volume,
+    octave,
+  } = Zdefault;
 
-  const [zVol, setZvol] = useState(-20);
-  const [zOct, setZoct] = useState(2);
-  const [zRel, setZrel] = useState(0.1);
-
-  const [zRev, setZrev] = useState({ decay: 1.5, preDelay: 0.01 });
-
-  const [zDel, setZdel] = useState({
-    maxDelay: 0,
-    feedback: 0,
-  });
-
+  const [zDefault, setZdefault] = useState(Zdefault),
+    [zNotes, setZnotes] = useState(notes),
+    [zOsc, setZosc] = useState(oscillator),
+    [zEnv, setZenv] = useState(envelop),
+    [zVol, setZvol] = useState(volume),
+    [zOct, setZoct] = useState(octave),
+    [zRel, setZrel] = useState(release),
+    [zRev, setZrev] = useState(reverb),
+    [zDel, setZdel] = useState(delay);
 
   return (
     <Fragment>
       <h1>Zamagana</h1>
+      <h3>
+        Browser-synth built with{" "}
+        <a href="https://tonejs.github.io/" target="_blank">
+          Tone.js{" "}
+        </a>
+        and <a href="https://reactjs.org/">React.js</a>
+      </h3>
       <Zsynth
+        zDefault={zDefault}
+        setZdefault={setZdefault}
         zNotes={zNotes}
         setZnotes={setZnotes}
         zOsc={zOsc}
@@ -40,13 +49,10 @@ const App = () => {
         setZoct={setZoct}
         zRel={zRel}
         setZrel={setZrel}
-
         zRev={zRev}
         setZrev={setZrev}
-
         zDel={zDel}
         setZdel={setZdel}
-
       />
     </Fragment>
   );

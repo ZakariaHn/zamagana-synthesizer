@@ -1,22 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 const ZdelayController = (props) => {
   const { zDel, setZdel } = props;
-  const incrementDelay = () => {
-    setZdel({ ...zDel, feedback: zDel.feedback + 0.1 });
-    console.log(zDel.feedback);
+  const handleDelay = (e) => {
+    setZdel({ ...zDel, feedback: e.target.value });
+    console.log(zDel);
   };
-  const decrementDelay = () => {
-    setZdel({ ...zDel, feedback: zDel.feedback - 0.1 });
-  };
+
   return (
-    <div className="delay control">
-      <ul>
-        <li onClick={incrementDelay}>+</li>
-        <li>Delay</li>
-        <li onClick={decrementDelay}>-</li>
-      </ul>
-    </div>
+    <Fragment>
+      <div className="delay control">
+        Delay
+        <input
+          type="range"
+          min={0.1}
+          max={1}
+          value={zDel.feedback}
+          onChange={handleDelay}
+          step="0.1"
+        />
+      </div>
+    </Fragment>
   );
 };
 

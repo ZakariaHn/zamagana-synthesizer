@@ -1,0 +1,12 @@
+{
+  "oscillator": "triangle",
+  "envelop": { "attack": 0.8, "decay": 0.1, "sustain": 0.5, "release": 2 },
+  "delay": { "maxdelay": 0, "feedback": 0 },
+  "reverb": {
+    "decay": 1.5,
+    "preDelay": 0
+  },
+  "volume": 40,
+  "octave": 1,
+  "release": 0.2
+}

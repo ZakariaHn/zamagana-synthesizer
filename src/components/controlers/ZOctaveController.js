@@ -1,13 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
+
 const ZOctaveController = (props) => {
+  const { zOct, setZoct } = props;
+
+  const handaleOctave = (e) => {
+    setZoct(e.target.value);
+    console.log(zOct);
+  };
+
   return (
-    <div className="octave control">
-      <ul>
-        <li onClick={() => props.setZoct((x) => x + 1)}>+</li>
-        <li>{`Octave ${props.zOct}`}</li>
-        <li onClick={() => props.setZoct((x) => x - 1)}>-</li>
-      </ul>
-    </div>
+    <Fragment>
+      <div className="octave control">
+        Octave
+        <input
+          type="range"
+          min={0}
+          max={2}
+          value={zOct}
+          onChange={handaleOctave}
+        />
+      </div>
+    </Fragment>
   );
 };
 

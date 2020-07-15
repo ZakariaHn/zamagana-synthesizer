@@ -13,18 +13,16 @@ const Zkeys = (props) => {
 
   return (
     <div className="set">
-      <ul>
-        {zNotes.map((key) => (
-          <div
-            className={key.color}
-            id={key.id}
-            key={key.id}
-            onMouseDown={() => play(key.note)}
-          >
-            {key.keyboardKey}
-          </div>
-        ))}
-      </ul>
+      {zNotes.map((key) => (
+        <div
+          className={key.color}
+          id={key.id}
+          key={key.id}
+          onMouseDown={() => play(key.note)}
+        >
+          {key.keyboardKey}
+        </div>
+      ))}
       <KeyboardEventHandler
         handleKeys={[
           "a",

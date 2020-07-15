@@ -1,0 +1,61 @@
+.set {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  height: 15rem;
+  position: relative;
+}
+
+.white {
+  background-color: #fff;
+  width: 12.5%;
+  border: 5px solid black;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.white:first-child {
+  margin-left: 6.25%;
+}
+
+.black {
+  z-index: 100;
+  background-color: black;
+  color: #fff;
+  width: 6.25%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.black:nth-child(2) {
+  left: 15.5%;
+  position: absolute;
+}
+
+.black:nth-child(4) {
+  left: 28%;
+  position: absolute;
+}
+
+.black:nth-child(7) {
+  left: 53%;
+  position: absolute;
+}
+
+.black:nth-child(9) {
+  left: 65.5%;
+  position: absolute;
+}
+
+.black:nth-child(11) {
+  left: 78%;
+  position: absolute;
+}

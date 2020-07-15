@@ -3,57 +3,82 @@ import React from "react";
 const ZenvelopControllers = (props) => {
   const { zEnv, setZenv } = props;
 
-  //   const handleRelease = (e) => {
-  //     setZenv(e.target.value);
-  //   };
+  const handleAttack = (e) => {
+    setZenv({ ...zEnv, attack: e.target.value });
+    console.log(zEnv);
+  };
+
+  const handleDecay = (e) => {
+    setZenv({ ...zEnv, decay: e.target.value });
+    console.log(zEnv);
+  };
+
+  const handleSustain = (e) => {
+    setZenv({ ...zEnv, sustain: e.target.value });
+    console.log(zEnv);
+  };
+
+  const handleRelease = (e) => {
+    setZenv({ ...zEnv, release: e.target.value });
+    console.log(zEnv);
+  };
+  const handleResetEnvelop = () => {
+    setZenv({
+      ...zEnv,
+      attack: 0.8,
+      decay: 0.1,
+      sustain: 0.5,
+      release: 2,
+    });
+  };
 
   return (
     <div className="envelop control">
-      {/* <div>
+      <div className="attackSlider">
         <p>Attack</p>
         <input
           type="range"
-          min={-60}
-          max={40}
+          min={0.1}
+          max={2.1}
+          step="0.2"
           value={zEnv.attack}
-          className="attack"
-          onChange={handleRelease}
+          onChange={handleAttack}
         />
       </div>
-      <div>
+      <div className="decaySlider">
         <p>Decay</p>
         <input
           type="range"
-          min={-60}
-          max={40}
+          min={0.1}
+          max={2.1}
+          step="0.2"
           value={zEnv.decay}
-          className="decay"
-          onChange={handleRelease}
+          onChange={handleDecay}
         />
       </div>
-      <div>
+      <div className="sustainSlider">
         <p>Sustain</p>
         <input
           type="range"
-          min={-60}
-          max={40}
+          min={0.1}
+          max={2.1}
+          step="0.2"
           value={zEnv.sustain}
-          className="sustain"
-          onChange={handleRelease}
+          onChange={handleSustain}
         />
-      </div> */}
-      {/* <div>
+      </div>
+      <div className="releaseSlider">
         <p>Release</p>
         <input
           onChange={handleRelease}
           type="range"
-          min={0}
-          max={10}
-          defaultValue={0}
-          className="release"
-          step="1"
+          min={0.1}
+          max={10.1}
+          step="0.5"
+          value={zEnv.release}
         />
-      </div> */}
+      </div>
+      <button onClick={handleResetEnvelop}>Reset Envelop</button>
     </div>
   );
 };
