@@ -2,11 +2,16 @@
   "oscillator": "triangle",
   "envelop": { "attack": 0.8, "decay": 0.1, "sustain": 0.5, "release": 2 },
   "delay": { "maxdelay": 0, "feedback": 0 },
-  "reverb": {
-    "decay": 1.5,
-    "preDelay": 0
-  },
+  "reverb": { "roomSize": 0.5 },
   "volume": 40,
   "octave": 1,
-  "release": 0.2
+  "release": 0.2,
+  "vibrato": { "frequency": 5, "depth": 0 },
+  "phaser": {
+    "frequency": 0.5,
+    "octaves": 3,
+    "stages": 10,
+    "Q": 100,
+    "baseFrequency": 350
+  }
 }

@@ -4,7 +4,6 @@ const ZdelayController = (props) => {
   const { zDel, setZdel } = props;
   const handleDelay = (e) => {
     setZdel({ ...zDel, feedback: e.target.value });
-    console.log(zDel);
   };
 
   return (
@@ -13,7 +12,7 @@ const ZdelayController = (props) => {
         Delay
         <input
           type="range"
-          min={0.1}
+          min={0}
           max={1}
           value={zDel.feedback}
           onChange={handleDelay}

@@ -6,6 +6,8 @@ import ZwaveFormController from "./ZwaveFormController";
 import ZreverbController from "./ZreverbController";
 import ZdelayController from "./ZdelayController";
 import ZenvelopControllers from "./evnelop_Controllers/ZenvelopController";
+import ZvibratoController from "./ZvibratoController";
+import ZphaserController from "./ZphaserController";
 
 const Zcontrols = (props) => {
   const {
@@ -26,6 +28,10 @@ const Zcontrols = (props) => {
     setZdefault,
     modalIsOpen,
     setModalOpen,
+    zVib,
+    setZvib,
+    zPhs,
+    setZphs,
   } = props;
 
   return (
@@ -36,6 +42,8 @@ const Zcontrols = (props) => {
       <ZreverbController zRev={zRev} setZrev={setZrev} />
       <ZwaveFormController setZosc={setZosc} />
       <ZdelayController setZdel={setZdel} zDel={zDel} />
+      <ZvibratoController zVib={zVib} setZvib={setZvib} />
+      <ZphaserController zPhs={zPhs} setZphs={setZphs} />
       <ZenvelopControllers
         zEnv={zEnv}
         setZenv={setZenv}
