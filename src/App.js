@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import Zsynth from "./components/Zsynth";
-import notes from "./notes.json";
-import Zdefault from "./defaultParameters.json";
+import notes from "./notes.json"; // array of objects have notes/ classes names / keyboard-trigger keys
+import Zdefault from "./defaultParameters.json"; // default values for all synth params
 
 const App = () => {
   const {
@@ -15,6 +15,8 @@ const App = () => {
     vibrato,
     phaser,
   } = Zdefault;
+
+  // state getting its values from defaultParameters.json
 
   const [zDefault, setZdefault] = useState(Zdefault),
     [zNotes, setZnotes] = useState(notes),
