@@ -28,7 +28,8 @@ const ZreverbController = (props) => {
     // </Fragment>
 
     <Fragment>
-      <div className="reverb-control">
+      <div className="reverb-control control">
+        Reverb
         <ul className="reverb-decay">
           <li
             onClick={() =>

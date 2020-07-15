@@ -9,8 +9,8 @@ const ZdelayController = (props) => {
 
   return (
     <Fragment>
-      <div className="delaySliderTiltle">Delay</div>
       <div className="delay control">
+        Delay
         <input
           type="range"
           min={0.1}
