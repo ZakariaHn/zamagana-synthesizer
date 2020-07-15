@@ -24,6 +24,10 @@ const Zsynth = (props) => {
     setZdefault,
     modalIsOpen,
     setModalOpen,
+    zVib,
+    setZvib,
+    zPhs,
+    setZphs,
   } = props;
 
   const handleResetParameters = () => {
@@ -46,6 +50,19 @@ const Zsynth = (props) => {
     // preDelay: props.zRev.preDelay,
   }).toMaster();
 
+  let Zphaser = new Tone.Phaser({
+    frequency: zPhs.frequency,
+    octaves: zPhs.octaves,
+    stages: zPhs.stages,
+    Q: zPhs.Q,
+    baseFrequency: zPhs.baseFrequency,
+  }).toMaster();
+
+  let Zvibrato = new Tone.Vibrato({
+    frequency: zVib.frequency,
+    depth: zVib.depth,
+  }).toMaster();
+
   let zsynth = new Tone.Synth({
     volume: zVol,
     oscillator: { type: zOsc },
@@ -55,7 +72,7 @@ const Zsynth = (props) => {
       sustain: zEnv.sustain,
       release: zEnv.release,
     },
-  }).connect(zDelay);
+  }).chain(zDelay, Zvibrato, Zphaser);
 
   return (
     <div className="zsynth">
@@ -77,6 +94,10 @@ const Zsynth = (props) => {
         setZdefault={setZdefault}
         modalIsOpen={modalIsOpen}
         setModalOpen={setModalOpen}
+        zVib={zVib}
+        setZvib={setZvib}
+        zPhs={zPhs}
+        setZphs={setZphs}
       />
       <Zkeys zNotes={zNotes} zsynth={zsynth} zRel={zRel} zOct={zOct} />
       <button onClick={handleResetParameters}>Reset all parameters</button>

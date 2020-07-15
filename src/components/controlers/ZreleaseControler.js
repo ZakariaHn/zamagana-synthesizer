@@ -7,7 +7,7 @@ const ZReleaseController = (props) => {
   };
   return (
     <Fragment>
-      <div className="delay control">
+      <div className="release control">
         Release
         <input
           type="range"
