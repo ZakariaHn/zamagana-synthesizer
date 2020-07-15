@@ -12,10 +12,19 @@ body {
   justify-content: center;
 }
 
+a {
+  color: black;
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 3rem;
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .zsynth {
