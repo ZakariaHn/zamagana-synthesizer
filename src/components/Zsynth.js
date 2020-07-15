@@ -45,9 +45,8 @@ const Zsynth = (props) => {
     feedback: zDel.feedback,
   }).toMaster();
 
-  let reverb = new Tone.Reverb({
-    decay: props.zRev.decay,
-    // preDelay: props.zRev.preDelay,
+  let zReverb = new Tone.JCReverb({
+    roomSize: props.zRev.roomSize,
   }).toMaster();
 
   let Zphaser = new Tone.Phaser({
@@ -72,7 +71,7 @@ const Zsynth = (props) => {
       sustain: zEnv.sustain,
       release: zEnv.release,
     },
-  }).chain(zDelay, Zvibrato, Zphaser);
+  }).chain(zDelay, Zvibrato, Zphaser, zReverb);
 
   return (
     <div className="zsynth">
