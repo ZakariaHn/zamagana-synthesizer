@@ -4,7 +4,6 @@ const ZphaserController = (props) => {
   const { zPhs, setZphs } = props;
   const handlePhaser = (e) => {
     setZphs({ ...zPhs, stages: e.target.value });
-    console.log(zPhs);
   };
   return (
     <Fragment>
@@ -12,7 +11,7 @@ const ZphaserController = (props) => {
         Phaser
         <input
           type="range"
-          min={0}
+          min={1}
           max={100}
           value={zPhs.octave}
           onChange={handlePhaser}

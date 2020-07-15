@@ -25,8 +25,6 @@ const Zsynth = (props) => {
     zOsc,
     zDefault,
     setZdefault,
-    modalIsOpen,
-    setModalOpen,
     zVib,
     setZvib,
     zPhs,
@@ -112,8 +110,6 @@ const Zsynth = (props) => {
         setZenv={setZenv}
         zDefault={zDefault}
         setZdefault={setZdefault}
-        modalIsOpen={modalIsOpen}
-        setModalOpen={setModalOpen}
         zVib={zVib}
         setZvib={setZvib}
         zPhs={zPhs}
