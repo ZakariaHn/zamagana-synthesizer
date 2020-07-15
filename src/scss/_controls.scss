@@ -1,12 +1,13 @@
 .controllers {
-  border: solid 1px red;
   width: 100%;
   color: #fff;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
   .control {
     color: #fff;
-    border: solid 1px red;
+    padding-right: 1rem;
   }
 }
 
