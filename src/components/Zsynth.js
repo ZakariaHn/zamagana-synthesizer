@@ -1,8 +1,11 @@
 import React from "react";
-import * as Tone from "tone";
+import * as Tone from "tone"; // importing synths/ effects /methods from Tone.js framewark
 import Zkeys from "./Zkeys";
 import Zcontrols from "./controlers/Zcontrols";
 
+/* this components contains the imported synth and effects from Tone.js 
+   and two components that represents the main structure for our Synth (Zkeys.js & zControls.js)
+*/
 const Zsynth = (props) => {
   const {
     zNotes,
@@ -30,6 +33,8 @@ const Zsynth = (props) => {
     setZphs,
   } = props;
 
+  // function sets the synth params to the default when the user clicks on "Reset all parameters" button
+
   const handleResetParameters = () => {
     const { octave, oscillator, reverb, volume, delay, release } = zDefault;
     setZoct(octave);
@@ -40,27 +45,11 @@ const Zsynth = (props) => {
     setZrel(release);
   };
 
-  let zDelay = new Tone.FeedbackDelay({
-    maxDelay: zDel.maxDelay,
-    feedback: zDel.feedback,
-  }).toMaster();
-
-  let zReverb = new Tone.JCReverb({
-    roomSize: props.zRev.roomSize,
-  }).toMaster();
-
-  let Zphaser = new Tone.Phaser({
-    frequency: zPhs.frequency,
-    octaves: zPhs.octaves,
-    stages: zPhs.stages,
-    Q: zPhs.Q,
-    baseFrequency: zPhs.baseFrequency,
-  }).toMaster();
-
-  let Zvibrato = new Tone.Vibrato({
-    frequency: zVib.frequency,
-    depth: zVib.depth,
-  }).toMaster();
+  /*
+   * assigning the Imported Synth to a the variable zsynth
+   * assigning values to its oscillator & envelop from the state
+   * connect the the effects to the synth using .chain() methode
+   */
 
   let zsynth = new Tone.Synth({
     volume: zVol,
@@ -72,6 +61,38 @@ const Zsynth = (props) => {
       release: zEnv.release,
     },
   }).chain(zDelay, Zvibrato, Zphaser, zReverb);
+
+  // =============== Adding Effects =================
+
+  // Delay
+
+  let zDelay = new Tone.FeedbackDelay({
+    maxDelay: zDel.maxDelay,
+    feedback: zDel.feedback,
+  }).toMaster();
+
+  // Reverb
+
+  let zReverb = new Tone.JCReverb({
+    roomSize: props.zRev.roomSize,
+  }).toMaster();
+
+  // Pahser
+
+  let Zphaser = new Tone.Phaser({
+    frequency: zPhs.frequency,
+    octaves: zPhs.octaves,
+    stages: zPhs.stages,
+    Q: zPhs.Q,
+    baseFrequency: zPhs.baseFrequency,
+  }).toMaster();
+
+  // Vibrato
+
+  let Zvibrato = new Tone.Vibrato({
+    frequency: zVib.frequency,
+    depth: zVib.depth,
+  }).toMaster();
 
   return (
     <div className="zsynth">

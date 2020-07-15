@@ -9,6 +9,11 @@ import ZenvelopControllers from "./evnelop_Controllers/ZenvelopController";
 import ZvibratoController from "./ZvibratoController";
 import ZphaserController from "./ZphaserController";
 
+/*
+   This component contains all the parameters controller for this Synth
+   (volume, Release, ocatver, oscillator, Reverb, Delay, Vibrato, Phaser, Envelop)
+
+*/
 const Zcontrols = (props) => {
   const {
     zVol,
