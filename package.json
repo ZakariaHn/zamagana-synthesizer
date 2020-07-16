@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/gabrielaacha/zamagana_synth",
+  "homepage": "https://gabrielaacha.github.io/zamagana_synth/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
