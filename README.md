@@ -111,8 +111,10 @@
 ![interface_img_1](/src/img/readme_img/interface.png)
 
 ## Technologies
-
+- [JavaScript](https://www.javascript.com/)
+- [ReactJs Library](https://reactjs.org/)
 - [ToneJs Library](https://tonejs.github.io/)
+- [Sass](https://sass-lang.com/)
 - [React keyboard event handler](https://www.npmjs.com/package/react-keyboard-event-handler)
 
 ## References
