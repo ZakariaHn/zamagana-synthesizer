@@ -6,9 +6,13 @@
   flex-wrap: wrap;
   padding: 1rem;
   justify-content: space-evenly;
+  letter-spacing: 1.5px;
   .control {
     color: #fff;
     padding-right: 1rem;
+  }
+  select {
+    color: gray;
   }
   .controlArea {
     padding: 1rem;
@@ -21,6 +25,7 @@
     .reset-button {
       padding: 0.2rem;
       margin-top: 0.5rem;
+      color: gray;
     }
   }
 }

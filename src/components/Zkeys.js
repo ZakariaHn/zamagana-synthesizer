@@ -13,28 +13,20 @@ const Zkeys = (props) => {
     zsynth.triggerAttackRelease(octavedNote, zRel);
   };
 
-  // in process
-
-  const handleScale = () => {};
-  const Cminor = zNotes.filter(
-    (obj) =>
-      obj.id !== 2 &&
-      obj.id !== 5 &&
-      obj.id !== 7 &&
-      obj.id !== 10 &&
-      obj.id !== 12
-  );
-
   /*
     applying .map() method on zNotes( which represents note.json) 
     and rendering the synth keys and setting it's class based on the data entered there.
  */
+
+  let style = { color: "red" };
+  const CminorScale = ["C", "D", "Eb", "F", "G", "Ab", "Bb"];
   const renderSynthKeys = zNotes.map((key) => (
     <div
       className={key.color}
       id={key.id}
       key={key.id}
       onMouseDown={() => play(key.note)}
+      style={CminorScale.includes(key.note) ? style : key}
     >
       {key.keyboardKey}
     </div>
@@ -63,7 +55,6 @@ const Zkeys = (props) => {
         {renderSynthKeys}
         {keyboardHandler}
       </div>
-      <button onClick={handleScale}>scale</button>
     </div>
   );
 };

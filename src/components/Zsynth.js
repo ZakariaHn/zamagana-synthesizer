@@ -34,13 +34,24 @@ const Zsynth = (props) => {
   // function sets the synth params to the default when the user clicks on "Reset all parameters" button
 
   const handleResetParameters = () => {
-    const { octave, oscillator, reverb, volume, delay, release } = zDefault;
+    const {
+      octave,
+      oscillator,
+      reverb,
+      volume,
+      delay,
+      release,
+      vibrato,
+      phaser,
+    } = zDefault;
     setZoct(octave);
     setZosc(oscillator);
     setZrev(reverb);
     setZvol(volume);
     setZdel(delay);
     setZrel(release);
+    setZvib(vibrato);
+    setZphs(phaser.stages);
   };
 
   // =============== Adding Effects =================
