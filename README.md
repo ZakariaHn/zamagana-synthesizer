@@ -19,12 +19,12 @@
   - phaser 
   - release 
   - vibratto 
-- envelop 
-  - attack 
-  - decay 
-  - sustain 
-  - release 
-  - reset button
+  - envelop 
+    - attack 
+    - decay 
+    - sustain 
+    - release 
+    - reset button
 
 ## Future workpplans
 - Sampler 
