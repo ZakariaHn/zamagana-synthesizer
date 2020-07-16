@@ -34,7 +34,7 @@
 - Musical scale highlighter (when the user choose a scale, the nots which build the scale get highlighted with a differnt color) 
 
 
-- Zsynth (contains the effects imported from the library tone.js)
+ ## Zsynth (contains the effects imported from the library tone.js)
 
 ```javascript
   // Delay
