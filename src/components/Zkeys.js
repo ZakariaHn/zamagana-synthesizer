@@ -26,8 +26,7 @@ const Zkeys = (props) => {
       id={key.id}
       key={key.id}
       onMouseDown={() => play(key.note)}
-      // style={CminorScale.includes(key.note) ? style : key}
-      a
+      style={CminorScale.includes(key.note) ? style : key}
     >
       {key.keyboardKey}
     </div>

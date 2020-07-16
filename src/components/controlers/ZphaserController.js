@@ -13,7 +13,7 @@ const ZphaserController = (props) => {
           type="range"
           min={1}
           max={100}
-          value={zPhs.octave}
+          value={zPhs.stages}
           onChange={handlePhaser}
           step="1"
         />
