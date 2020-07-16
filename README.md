@@ -28,8 +28,8 @@
 
 ## Future workplans
 - Sampler 
-- Sequncer 
-- Pop-up window for controllers 
+- Sequencer 
+- Pop-up window for the controllers with multiple parameters 
 - Change Synth type menu 
 - Musical scale highlighter (when the user choose a scale, the notes which build the scale get highlighted with a different color) 
 
