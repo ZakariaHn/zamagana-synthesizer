@@ -14,16 +14,16 @@
 - Preset button
 - controllers:
   - Octaver
-  - reverb 
-  - delay 
-  - phaser 
-  - release 
-  - vibratto 
-  - envelop 
-    - attack 
-    - decay 
-    - sustain 
-    - release 
+  - reverb
+  - delay
+  - phaser
+  - release
+  - vibrato
+  - envelop
+    - attack
+    - decay
+    - sustain
+    - release
     - reset button
 
 ## Future workplans
@@ -32,58 +32,109 @@
 - Pop-up window for the controllers with multiple parameters 
 - Change Synth type menu 
 - Musical scale highlighter (when the user choose a scale, the notes which build the scale get highlighted with a different color) 
+- Sampler
+- Sequencer
+- Pop-up window for controllers
+- Change Synth type menu
+- Musical scale highlighter (when the user choose a scale, the nots which build the scale get highlighted with a differnt color)
 
-
- ## Zsynth.js (contains the effects imported from the library tone.js)
+## Zsynth.js (contains the effects imported from the library tone.js)
 
 ```javascript
-  // Delay
+// Delay
 
-  let zDelay = new Tone.FeedbackDelay({
-    maxDelay: zDel.maxDelay,
-    feedback: zDel.feedback,
-  }).toMaster();
+let zDelay = new Tone.FeedbackDelay({
+  maxDelay: zDel.maxDelay,
+  feedback: zDel.feedback,
+}).toMaster();
 
-  // Reverb
+// Reverb
 
-  let zReverb = new Tone.JCReverb({
-    roomSize: props.zRev.roomSize,
-  }).toMaster();
+let zReverb = new Tone.JCReverb({
+  roomSize: props.zRev.roomSize,
+}).toMaster();
 
-  // Pahser
+// Pahser
 
-  let Zphaser = new Tone.Phaser({
-    frequency: zPhs.frequency,
-    octaves: zPhs.octaves,
-    stages: zPhs.stages,
-    Q: zPhs.Q,
-    baseFrequency: zPhs.baseFrequency,
-  }).toMaster();
+let Zphaser = new Tone.Phaser({
+  frequency: zPhs.frequency,
+  octaves: zPhs.octaves,
+  stages: zPhs.stages,
+  Q: zPhs.Q,
+  baseFrequency: zPhs.baseFrequency,
+}).toMaster();
 
-  // Vibrato
+// Vibrato
 
-  let Zvibrato = new Tone.Vibrato({
-    frequency: zVib.frequency,
-    depth: zVib.depth,
-  }).toMaster();
+let Zvibrato = new Tone.Vibrato({
+  frequency: zVib.frequency,
+  depth: zVib.depth,
+}).toMaster();
 
-  /*
-   * assigning the Imported Synth to a the variable zsynth
-   * assigning values to its oscillator & envelop from the state
-   * connect the the effects to the synth using .chain() methode
-   */
+/*
+ * assigning the Imported Synth to a the variable zsynth
+ * assigning values to its oscillator & envelop from the state
+ * connect the the effects to the synth using .chain() methode
+ */
 
-  let zsynth = new Tone.Synth({
-    volume: zVol,
-    oscillator: { type: zOsc },
-    envelope: {
-      attack: zEnv.attack,
-      decay: zEnv.decay,
-      sustain: zEnv.sustain,
-      release: zEnv.release,
-    },
-  }).chain(zDelay, Zvibrato, Zphaser, zReverb);
+let zsynth = new Tone.Synth({
+  volume: zVol,
+  oscillator: { type: zOsc },
+  envelope: {
+    attack: zEnv.attack,
+    decay: zEnv.decay,
+    sustain: zEnv.sustain,
+    release: zEnv.release,
+  },
+}).chain(zDelay, Zvibrato, Zphaser, zReverb);
+```
 
+## Zkeys.js (contains methods from tone.js and events handled through keyboard event handler package from npm)
+
+```javascript
+// This function initiate the note to be played by applying the Tone.js methouds (.start() & .triggerAttackRelease())
+
+const play = (note) => {
+  Tone.start();
+  const octavedNote = note + zOct;
+  zsynth.triggerAttackRelease(octavedNote, zRel);
+};
+
+/*
+    applying .map() method on zNotes( which represents note.json) 
+    and rendering the synth keys and setting it's class based on the data entered there.
+ */
+
+let style = { color: "red" };
+const CminorScale = ["C", "D", "Eb", "F", "G", "Ab", "Bb"];
+const renderSynthKeys = zNotes.map((key) => (
+  <div
+    className={key.color}
+    id={key.id}
+    key={key.id}
+    onMouseDown={() => play(key.note)}
+    // style={CminorScale.includes(key.note) ? style : key}
+  >
+    {key.keyboardKey}
+  </div>
+));
+
+/*
+   using the react component "KeyboardEventHandler"
+   and mapping again on Znotes in order to assign the keyboard keys that'll trigger the synth keys
+ */
+const keyboardHandler = (
+  <KeyboardEventHandler
+    handleKeys={["a", "w", "d", "r", "f", "g", "y", "h", "u", "j", "i", "k"]}
+    onKeyEvent={(key) =>
+      zNotes.map((obj) => {
+        if (key === obj.keyboardKey) {
+          play(obj.note);
+        }
+      })
+    }
+  />
+);
 ```
 
 ## Interface
@@ -107,10 +158,10 @@
 - Reset all parameters button
 - Wave form controller drop-down list
 
-
 ![interface_img_1](/src/img/readme_img/interface.png)
 
 ## Technologies
+
 - [JavaScript](https://www.javascript.com/)
 - [ReactJs Library](https://reactjs.org/)
 - [ToneJs Library](https://tonejs.github.io/)
