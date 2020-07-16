@@ -5,7 +5,7 @@
   "reverb": { "roomSize": 0 },
   "volume": 40,
   "octave": 1,
-  "release": 0.2,
+  "release": 0.1,
   "vibrato": { "frequency": 5, "depth": 0 },
   "phaser": {
     "frequency": 0.6,
