@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/gabrielaacha/zamagana_synth/static/css/main.c7388637.chunk.css",
-    "main.js": "/gabrielaacha/zamagana_synth/static/js/main.77ac9ddd.chunk.js",
-    "main.js.map": "/gabrielaacha/zamagana_synth/static/js/main.77ac9ddd.chunk.js.map",
-    "runtime-main.js": "/gabrielaacha/zamagana_synth/static/js/runtime-main.4cfe1990.js",
-    "runtime-main.js.map": "/gabrielaacha/zamagana_synth/static/js/runtime-main.4cfe1990.js.map",
-    "static/js/2.934103c8.chunk.js": "/gabrielaacha/zamagana_synth/static/js/2.934103c8.chunk.js",
-    "static/js/2.934103c8.chunk.js.map": "/gabrielaacha/zamagana_synth/static/js/2.934103c8.chunk.js.map",
-    "index.html": "/gabrielaacha/zamagana_synth/index.html",
-    "precache-manifest.1c4eebb574d6ac94bd19a9149cb0839a.js": "/gabrielaacha/zamagana_synth/precache-manifest.1c4eebb574d6ac94bd19a9149cb0839a.js",
-    "service-worker.js": "/gabrielaacha/zamagana_synth/service-worker.js",
-    "static/css/main.c7388637.chunk.css.map": "/gabrielaacha/zamagana_synth/static/css/main.c7388637.chunk.css.map",
-    "static/js/2.934103c8.chunk.js.LICENSE.txt": "/gabrielaacha/zamagana_synth/static/js/2.934103c8.chunk.js.LICENSE.txt"
+    "main.css": "/zamagana_synth/static/css/main.c7388637.chunk.css",
+    "main.js": "/zamagana_synth/static/js/main.77ac9ddd.chunk.js",
+    "main.js.map": "/zamagana_synth/static/js/main.77ac9ddd.chunk.js.map",
+    "runtime-main.js": "/zamagana_synth/static/js/runtime-main.aadfd28e.js",
+    "runtime-main.js.map": "/zamagana_synth/static/js/runtime-main.aadfd28e.js.map",
+    "static/js/2.934103c8.chunk.js": "/zamagana_synth/static/js/2.934103c8.chunk.js",
+    "static/js/2.934103c8.chunk.js.map": "/zamagana_synth/static/js/2.934103c8.chunk.js.map",
+    "index.html": "/zamagana_synth/index.html",
+    "precache-manifest.aac8700d39e34ea3917eb52105b10fee.js": "/zamagana_synth/precache-manifest.aac8700d39e34ea3917eb52105b10fee.js",
+    "service-worker.js": "/zamagana_synth/service-worker.js",
+    "static/css/main.c7388637.chunk.css.map": "/zamagana_synth/static/css/main.c7388637.chunk.css.map",
+    "static/js/2.934103c8.chunk.js.LICENSE.txt": "/zamagana_synth/static/js/2.934103c8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4cfe1990.js",
+    "static/js/runtime-main.aadfd28e.js",
     "static/js/2.934103c8.chunk.js",
     "static/css/main.c7388637.chunk.css",
     "static/js/main.77ac9ddd.chunk.js"
