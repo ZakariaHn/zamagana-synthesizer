@@ -8,7 +8,7 @@ const ZReleaseController = (props) => {
   return (
     <Fragment>
       <div className="release control">
-        Release
+        <p>Release</p>
         <input
           type="range"
           min={0.1}

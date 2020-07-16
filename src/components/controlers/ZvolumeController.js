@@ -12,7 +12,7 @@ const ZvolumeControler = (props) => {
   return (
     <Fragment>
       <div className="volume control" id="vol">
-        vol
+        <p>Volume</p>
         <input
           type="range"
           min={-10}
