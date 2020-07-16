@@ -38,7 +38,7 @@ const Zkeys = (props) => {
  */
   const keyboardHandler = (
     <KeyboardEventHandler
-      handleKeys={["a", "w", "d", "r", "f", "g", "y", "h", "u", "j", "i", "k"]}
+      handleKeys={["A", "W", "D", "R", "F", "G", "Y", "H", "U", "J", "I", "K"]}
       onKeyEvent={(key) =>
         zNotes.map((obj) => {
           if (key === obj.keyboardKey) {
