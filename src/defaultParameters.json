@@ -1,6 +1,6 @@
 {
   "oscillator": "triangle",
-  "envelop": { "attack": 0.9, "decay": 0.4, "sustain": 0.01, "release": 1.4 },
+  "envelop": { "attack": 0.9, "decay": 0.4, "sustain": 0.01, "release": 0.1 },
   "delay": { "maxdelay": 0, "feedback": 0 },
   "reverb": { "roomSize": 0.2 },
   "volume": 40,
