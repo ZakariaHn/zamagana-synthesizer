@@ -5,10 +5,6 @@ const ZvolumeControler = (props) => {
     props.setZvol(e.target.value);
   };
 
-  const handleChangeComplete = () => {
-    document.getElementById("zSynth").focus();
-  };
-
   return (
     <Fragment>
       <div className="volume control" id="vol">
@@ -19,7 +15,6 @@ const ZvolumeControler = (props) => {
           max={40}
           value={props.zVol}
           onChange={handaleVolume}
-          onChangeComplete={handleChangeComplete}
         />
       </div>
     </Fragment>
