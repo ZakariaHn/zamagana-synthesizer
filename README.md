@@ -30,6 +30,7 @@
 - Sampler 
 - Sequncer 
 - Pop-up window for controllers 
+- Change Synth type menu 
 - Musical scale highlighter (when the user choose a scale, the nots which build the scale get highlighted with a differnt color) 
 
 
@@ -97,15 +98,15 @@
   - phaser controller
   - release controller
   - vibratto controller
-- envelop controller
-  - attack slider
-  - decay slider
-  - sustain slider
-  - release slider
-  - reset button
-- reset all parameters button
-- wave form controller menu
-- choose Synth type menu (evtl)
+  - envelop controller
+    - attack slider
+    - decay slider
+    - sustain slider
+    - release slider
+    - reset button
+- Reset all parameters button
+- Wave form controller drop-down list
+
 
 ![interface_img_1](/src/img/readme_img/interface.png)
 
