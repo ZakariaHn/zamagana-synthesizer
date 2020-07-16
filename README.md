@@ -26,7 +26,7 @@
     - release 
     - reset button
 
-## Future workpplans
+## Future workplans
 - Sampler 
 - Sequncer 
 - Pop-up window for controllers 
