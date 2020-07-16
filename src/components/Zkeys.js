@@ -18,7 +18,7 @@ const Zkeys = (props) => {
     and rendering the synth keys and setting it's class based on the data entered there.
  */
 
-  let style = { color: "red" };
+  let style = { color: "red", fontWeight: "bold" };
   const CminorScale = ["C", "D", "Eb", "F", "G", "Ab", "Bb"];
   const renderSynthKeys = zNotes.map((key) => (
     <div
@@ -26,7 +26,7 @@ const Zkeys = (props) => {
       id={key.id}
       key={key.id}
       onMouseDown={() => play(key.note)}
-      // style={CminorScale.includes(key.note) ? style : key}
+      style={CminorScale.includes(key.note) ? style : key}
     >
       {key.keyboardKey}
     </div>
