@@ -8,7 +8,7 @@
   "release": 0.2,
   "vibrato": { "frequency": 5, "depth": 0 },
   "phaser": {
-    "frequency": 0.5,
+    "frequency": 0.6,
     "octaves": 3,
     "stages": 1,
     "Q": 100,
