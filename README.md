@@ -31,7 +31,7 @@
 - Sequncer 
 - Pop-up window for controllers 
 - Change Synth type menu 
-- Musical scale highlighter (when the user choose a scale, the nots which build the scale get highlighted with a differnt color) 
+- Musical scale highlighter (when the user choose a scale, the notes which build the scale get highlighted with a different color) 
 
 
  ## Zsynth.js (contains the effects imported from the library tone.js)
