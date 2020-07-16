@@ -78,7 +78,9 @@ const ZenvelopControllers = (props) => {
           value={zEnv.release}
         />
       </div>
-      <button onClick={handleResetEnvelop}>Reset Envelop</button>
+      <button className="reset-button" onClick={handleResetEnvelop}>
+        reset envelope
+      </button>
     </div>
   );
 };

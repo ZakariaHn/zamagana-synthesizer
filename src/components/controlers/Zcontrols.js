@@ -41,22 +41,31 @@ const Zcontrols = (props) => {
 
   return (
     <div className="controllers">
-      <ZvolumeControler zVol={zVol} setZvol={setZvol} />
-      <ZReleaseController zRel={zRel} setZrel={setZrel} />
-      <ZOctaveController zOct={zOct} setZoct={setZoct} />
-      <ZreverbController zRev={zRev} setZrev={setZrev} />
-      <ZwaveFormController setZosc={setZosc} />
-      <ZdelayController setZdel={setZdel} zDel={zDel} />
-      <ZvibratoController zVib={zVib} setZvib={setZvib} />
-      <ZphaserController zPhs={zPhs} setZphs={setZphs} />
-      <ZenvelopControllers
-        zEnv={zEnv}
-        setZenv={setZenv}
-        zDefault={zDefault}
-        setZdefault={setZdefault}
-        modalIsOpen={modalIsOpen}
-        setModalOpen={setModalOpen}
-      />
+      <div className="controlArea">
+        <h5>Main Settings</h5>
+        <ZvolumeControler zVol={zVol} setZvol={setZvol} />
+        <ZReleaseController zRel={zRel} setZrel={setZrel} />
+        <ZOctaveController zOct={zOct} setZoct={setZoct} />
+        <ZwaveFormController setZosc={setZosc} />
+      </div>
+      <div className="controlArea">
+        <h5>Envelope</h5>
+        <ZenvelopControllers
+          zEnv={zEnv}
+          setZenv={setZenv}
+          zDefault={zDefault}
+          setZdefault={setZdefault}
+          modalIsOpen={modalIsOpen}
+          setModalOpen={setModalOpen}
+        />
+      </div>
+      <div className="controlArea">
+        <h5>Effects</h5>
+        <ZreverbController zRev={zRev} setZrev={setZrev} />
+        <ZdelayController setZdel={setZdel} zDel={zDel} />
+        <ZvibratoController zVib={zVib} setZvib={setZvib} />
+        <ZphaserController zPhs={zPhs} setZphs={setZphs} />
+      </div>
     </div>
   );
 };

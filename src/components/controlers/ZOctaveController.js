@@ -11,7 +11,7 @@ const ZOctaveController = (props) => {
   return (
     <Fragment>
       <div className="octave control">
-        Octave
+        <p>Octave</p>
         <input
           type="range"
           min={0}

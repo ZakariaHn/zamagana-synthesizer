@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+
 const ZvolumeControler = (props) => {
   const handaleVolume = (e) => {
     props.setZvol(e.target.value);
@@ -6,8 +7,8 @@ const ZvolumeControler = (props) => {
 
   return (
     <Fragment>
-      <div className="volume control">
-        vol
+      <div className="volume control" id="vol">
+        <p>Volume</p>
         <input
           type="range"
           min={-10}

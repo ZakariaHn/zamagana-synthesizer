@@ -34,7 +34,7 @@ const App = () => {
     <Fragment>
       <h1>Zamagana</h1>
       <h3>
-        Browser-synth built with
+        Browser-synth built with{" "}
         <a href="https://tonejs.github.io/" target="_blank">
           Tone.js{" "}
         </a>

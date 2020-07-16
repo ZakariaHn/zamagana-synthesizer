@@ -93,7 +93,7 @@ const Zsynth = (props) => {
   }).chain(zDelay, Zvibrato, Zphaser, zReverb);
 
   return (
-    <div className="zsynth">
+    <div className="zsynth" id="zSynth">
       <Zcontrols
         zDel={zDel}
         setZdel={setZdel}

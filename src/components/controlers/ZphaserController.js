@@ -8,7 +8,7 @@ const ZphaserController = (props) => {
   return (
     <Fragment>
       <div className="phaser control">
-        Phaser
+        <p>Phaser</p>
         <input
           type="range"
           min={1}
