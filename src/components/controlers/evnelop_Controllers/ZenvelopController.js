@@ -26,10 +26,10 @@ const ZenvelopControllers = (props) => {
   function handleResetEnvelop() {
     setZenv({
       ...zEnv,
-      attack: 0.8,
-      decay: 0.1,
-      sustain: 0.5,
-      release: 2,
+      attack: 0.9,
+      decay: 0.4,
+      sustain: 0.01,
+      release: 1.4,
     });
   }
 

@@ -1,8 +1,8 @@
 {
   "oscillator": "triangle",
-  "envelop": { "attack": 0.8, "decay": 0.1, "sustain": 0.5, "release": 2 },
+  "envelop": { "attack": 0.9, "decay": 0.4, "sustain": 0.01, "release": 1.4 },
   "delay": { "maxdelay": 0, "feedback": 0 },
-  "reverb": { "roomSize": 0 },
+  "reverb": { "roomSize": 0.2 },
   "volume": 40,
   "octave": 1,
   "release": 0.1,
@@ -11,7 +11,7 @@
     "frequency": 0.6,
     "octaves": 3,
     "stages": 1,
-    "Q": 100,
+    "Q": 10,
     "baseFrequency": 350
   }
 }

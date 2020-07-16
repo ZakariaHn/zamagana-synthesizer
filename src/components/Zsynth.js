@@ -92,7 +92,7 @@ const Zsynth = (props) => {
    * connect the the effects to the synth using .chain() methode
    */
 
-  let zsynth = new Tone.Synth({
+  let zsynth = new Tone.MonoSynth({
     volume: zVol,
     oscillator: { type: zOsc },
     envelope: {
