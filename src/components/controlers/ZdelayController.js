@@ -9,7 +9,7 @@ const ZdelayController = (props) => {
   return (
     <Fragment>
       <div className="delay control">
-        Delay
+        <p>Delay</p>
         <input
           type="range"
           min={0}

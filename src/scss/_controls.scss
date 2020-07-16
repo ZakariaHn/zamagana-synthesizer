@@ -5,9 +5,23 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 1rem;
+  justify-content: space-evenly;
   .control {
     color: #fff;
     padding-right: 1rem;
+  }
+  .controlArea {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h5 {
+      text-decoration: underline;
+    }
+    .reset-button {
+      padding: 0.2rem;
+      margin-top: 0.5rem;
+    }
   }
 }
 

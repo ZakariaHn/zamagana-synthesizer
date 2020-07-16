@@ -8,7 +8,7 @@ const ZvibratoController = (props) => {
   return (
     <Fragment>
       <div className="vibrato control">
-        Vibrato
+        <p>Vibrato</p>
         <input
           type="range"
           min={0}

@@ -9,7 +9,7 @@ const ZreverbController = (props) => {
   return (
     <Fragment>
       <div className="reverb-control">
-        reverb
+        <p>Reverb</p>
         <input
           type="range"
           min={0}
