@@ -26,10 +26,14 @@
     - release
     - reset button
 
-## Future workpplans
-
+## Future workplans
+- Sampler 
+- Sequencer 
+- Pop-up window for the controllers with multiple parameters 
+- Change Synth type menu 
+- Musical scale highlighter (when the user choose a scale, the notes which build the scale get highlighted with a different color) 
 - Sampler
-- Sequncer
+- Sequencer
 - Pop-up window for controllers
 - Change Synth type menu
 - Musical scale highlighter (when the user choose a scale, the nots which build the scale get highlighted with a differnt color)
@@ -165,7 +169,7 @@ const keyboardHandler = (
 - [React keyboard event handler](https://www.npmjs.com/package/react-keyboard-event-handler)
 
 ## References
-
+- [Modulargrid](https://www.modulargrid.net/)
 - [Learning Music Ableton](https://learningmusic.ableton.com/)
 - [MDN Simple Synth](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Simple_synth)
 - [JS Piano Keyboard](https://www.freecodecamp.org/news/javascript-piano-keyboard/)
