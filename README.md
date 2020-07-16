@@ -5,8 +5,8 @@
 ## Main task division
 
 - Marcelo: CSS
-- Zakaria: React/JS
-- Nathan: React/JS
+- Zakaria: React.JS/ Tone.js
+- Nathan: React.JS/ Tone.js/ Css
 - Gabriela: Project Management
 
 ## Features
@@ -27,7 +27,7 @@
 
 - Zsynth (contains the effects imported from the library tone.js)
 
-```
+```javascript
   // Delay
 
   let zDelay = new Tone.FeedbackDelay({
