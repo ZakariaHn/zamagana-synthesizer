@@ -11,19 +11,27 @@
 
 ## Features
 
-- volume slider
-- reset all parameters
-- choose octave
-- reverb controller
-- delay controller
-- phaser controller
-- release controller
-- vibratto controller
-- wave form controller
-- envelop controller
-- new sound recording (eventually)
-- open new window with further options (eventually)
-- user should be able to change the key's assignment(eventually)
+- Preset button
+- controllers:
+  - Octaver
+  - reverb 
+  - delay 
+  - phaser 
+  - release 
+  - vibratto 
+- envelop 
+  - attack 
+  - decay 
+  - sustain 
+  - release 
+  - reset button
+
+## Future workpplans
+- Sampler 
+- Sequncer 
+- Pop-up window for controllers 
+- Musical scale highlighter (when the user choose a scale, the nots which build the scale get highlighted with a differnt color) 
+
 
 - Zsynth (contains the effects imported from the library tone.js)
 
@@ -79,10 +87,10 @@
 
 ## Interface
 
-- keyboard-looking keys
-- volume slider
-- reset all parameters button
-- choose octave slider
+- Keyboard-looking keys
+- Volume slider
+- Reset all parameters button
+- Octave slider
 - controller sliders:
   - reverb controller
   - delay controller
