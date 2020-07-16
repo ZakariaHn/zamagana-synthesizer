@@ -127,7 +127,9 @@ const Zsynth = (props) => {
         setZphs={setZphs}
       />
       <Zkeys zNotes={zNotes} zsynth={zsynth} zRel={zRel} zOct={zOct} />
-      <button onClick={handleResetParameters}>Reset all parameters</button>
+      <button onClick={handleResetParameters} className="resetParams">
+        Reset all parameters
+      </button>
     </div>
   );
 };
