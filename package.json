@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://gabrielaacha.github.io/zamagana_synth/",
+  "homepage": "https://zakariahn.github.io/zamagana-synthesizer/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabrielaacha/zamagana_synth.git"
+    "url": "git+https://zakariahn.github.io/zamagana-synthesizer/"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gabrielaacha/zamagana_synth/issues"
+    "url": "https://zakariahn.github.io/zamagana-synthesizer/issues"
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
